@@ -1,0 +1,161 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import MapProvider from "@/lib/mapbox/provider";
+import LocationMarkers from "@/components/location-markers";
+import FlightPaths from "@/components/flight-paths";
+import ScratchMapLayer from "@/components/scratch-map-layer";
+import ScratchMapCounter from "@/components/scratch-map-counter";
+import FlightList from "@/components/flight-list";
+import MapLabels from "@/components/map-labels";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Plane, Map, Images, Gamepad2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { ALL_YEARS, FLIGHT_YEARS } from "@/lib/flights-by-year";
+
+type ViewMode = "gallery" | "scratch-map" | "flights";
+
+export default function Home() {
+  const mapContainerRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
+  const [viewMode, setViewMode] = useState<ViewMode>("gallery");
+  const [selectedYear, setSelectedYear] = useState<string>(ALL_YEARS);
+  const [hoveredFlightKey, setHoveredFlightKey] = useState<string | null>(null);
+  const [selectedFlightKey, setSelectedFlightKey] = useState<string | null>(
+    null,
+  );
+
+  const handleTabChange = (value: string) => {
+    if (value === "game") {
+      router.push("/game");
+    } else {
+      setViewMode(value as ViewMode);
+    }
+  };
+
+  // Clear flight selection when leaving the flights tab or switching year
+  useEffect(() => {
+    setHoveredFlightKey(null);
+    setSelectedFlightKey(null);
+  }, [selectedYear, viewMode]);
+
+  return (
+    <div className="w-screen h-screen relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-1/3 z-10 pointer-events-auto">
+        {/* Mode Tabs */}
+        <div className="p-6 flex items-start justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <Tabs
+              value={viewMode}
+              onValueChange={handleTabChange}
+              className="w-auto"
+            >
+              <TabsList className="bg-black/40 backdrop-blur-sm border border-white/20">
+                <TabsTrigger
+                  value="gallery"
+                  className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
+                >
+                  <Images className=" h-4 w-4" />
+                  Gallery
+                </TabsTrigger>
+                <TabsTrigger
+                  value="scratch-map"
+                  className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
+                >
+                  <Map className="h-4 w-4" />
+                  Scratch Map
+                </TabsTrigger>
+                <TabsTrigger
+                  value="flights"
+                  className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
+                >
+                  <Plane className="h-4 w-4" />
+                  Flights
+                </TabsTrigger>
+                <TabsTrigger
+                  value="game"
+                  className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
+                >
+                  <Gamepad2 className="h-4 w-4" />
+                  Game
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
+
+            {viewMode === "flights" && (
+              <Select value={selectedYear} onValueChange={setSelectedYear}>
+                <SelectTrigger className="h-9! w-[130px] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80">
+                  <SelectValue placeholder="Select year" />
+                </SelectTrigger>
+                <SelectContent className="bg-black/40 backdrop-blur-sm border border-white/20">
+                  <SelectItem
+                    value={ALL_YEARS}
+                    className="text-white/80 hover:text-white hover:bg-white/20 focus:bg-white/20"
+                  >
+                    All years
+                  </SelectItem>
+                  {FLIGHT_YEARS.map((year) => (
+                    <SelectItem
+                      key={year}
+                      value={year}
+                      className="text-white/80 hover:text-white hover:bg-white/20 focus:bg-white/20"
+                    >
+                      {year}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            )}
+          </div>
+
+          <ScratchMapCounter active={viewMode === "scratch-map"} />
+        </div>
+      </div>
+
+      <FlightList
+        active={viewMode === "flights"}
+        selectedYear={selectedYear}
+        hoveredKey={hoveredFlightKey}
+        selectedKey={selectedFlightKey}
+        onHover={setHoveredFlightKey}
+        onSelect={(key) =>
+          setSelectedFlightKey((prev) => (prev === key ? null : key))
+        }
+      />
+
+      {/* Globe map - full screen container, globe positioned lower */}
+      <div
+        id="map-container"
+        ref={mapContainerRef}
+        className="absolute inset-0 w-full h-full"
+      />
+      <MapProvider
+        mapContainerRef={mapContainerRef}
+        initialViewState={{
+          longitude: 4,
+          latitude: 60,
+          zoom: 3.2,
+          pitch: 45,
+        }}
+      >
+        <MapLabels />
+        <LocationMarkers viewMode={viewMode} />
+        <FlightPaths
+          viewMode={viewMode}
+          selectedYear={selectedYear}
+          hoveredKey={hoveredFlightKey}
+          selectedKey={selectedFlightKey}
+          onHoverChange={setHoveredFlightKey}
+        />
+        <ScratchMapLayer viewMode={viewMode} />
+      </MapProvider>
+    </div>
+  );
+}

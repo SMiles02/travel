@@ -1,0 +1,3247 @@
+[
+  {
+    "timezones": [
+      "Asia/Kabul"
+    ],
+    "latlng": [
+      33,
+      65
+    ],
+    "name": "Afghanistan",
+    "country_code": "AF",
+    "capital": "Kabul",
+    "continent": "AS",
+    "capitalLat": 34.5289,
+    "capitalLng": 69.1725,
+    "population": 4011770
+  },
+  {
+    "timezones": [
+      "Africa/Luanda"
+    ],
+    "latlng": [
+      -12.5,
+      18.5
+    ],
+    "name": "Angola",
+    "country_code": "AO",
+    "capital": "Luanda",
+    "continent": "AF",
+    "capitalLat": -8.8368,
+    "capitalLng": 13.2343,
+    "population": 7774200
+  },
+  {
+    "timezones": [
+      "Europe/Tirane"
+    ],
+    "latlng": [
+      41,
+      20
+    ],
+    "name": "Albania",
+    "country_code": "AL",
+    "capital": "Tirana",
+    "continent": "EU",
+    "capitalLat": 41.3275,
+    "capitalLng": 19.8189,
+    "population": 475577
+  },
+  {
+    "timezones": [
+      "Europe/Andorra"
+    ],
+    "latlng": [
+      42.5,
+      1.5
+    ],
+    "name": "Andorra",
+    "country_code": "AD",
+    "capital": "Andorra la Vella",
+    "continent": "EU",
+    "capitalLat": 42.5078,
+    "capitalLng": 1.5211,
+    "population": 22614
+  },
+  {
+    "timezones": [
+      "Asia/Dubai"
+    ],
+    "latlng": [
+      24,
+      54
+    ],
+    "name": "United Arab Emirates",
+    "country_code": "AE",
+    "capital": "Abu Dhabi",
+    "continent": "AS",
+    "capitalLat": 24.4648,
+    "capitalLng": 54.3618,
+    "population": 1419699
+  },
+  {
+    "timezones": [
+      "America/Argentina/Buenos_Aires",
+      "America/Argentina/Cordoba",
+      "America/Argentina/Salta",
+      "America/Argentina/Jujuy",
+      "America/Argentina/Tucuman",
+      "America/Argentina/Catamarca",
+      "America/Argentina/La_Rioja",
+      "America/Argentina/San_Juan",
+      "America/Argentina/Mendoza",
+      "America/Argentina/San_Luis",
+      "America/Argentina/Rio_Gallegos",
+      "America/Argentina/Ushuaia"
+    ],
+    "latlng": [
+      -34,
+      -64
+    ],
+    "name": "Argentina",
+    "country_code": "AR",
+    "capital": "Buenos Aires",
+    "continent": "SA",
+    "capitalLat": -34.6051,
+    "capitalLng": -58.4004,
+    "population": 14966530
+  },
+  {
+    "timezones": [
+      "Asia/Yerevan"
+    ],
+    "latlng": [
+      40,
+      45
+    ],
+    "name": "Armenia",
+    "country_code": "AM",
+    "capital": "Yerevan",
+    "continent": "AS",
+    "capitalLat": 40.182,
+    "capitalLng": 44.5146,
+    "population": 1080324
+  },
+  {
+    "timezones": [
+      "America/Antigua"
+    ],
+    "latlng": [
+      17.05,
+      -61.8
+    ],
+    "name": "Antigua and Barbuda",
+    "country_code": "AG",
+    "capital": "Saint John's",
+    "continent": "NA",
+    "capitalLat": 17.1172,
+    "capitalLng": -61.8457,
+    "population": 20764
+  },
+  {
+    "timezones": [
+      "Australia/Lord_Howe",
+      "Antarctica/Macquarie",
+      "Australia/Hobart",
+      "Australia/Currie",
+      "Australia/Melbourne",
+      "Australia/Sydney",
+      "Australia/Broken_Hill",
+      "Australia/Brisbane",
+      "Australia/Lindeman",
+      "Australia/Adelaide",
+      "Australia/Darwin",
+      "Australia/Perth",
+      "Australia/Eucla"
+    ],
+    "latlng": [
+      -27,
+      133
+    ],
+    "name": "Australia",
+    "country_code": "AU",
+    "capital": "Canberra",
+    "continent": "OC",
+    "capitalLat": -35.2835,
+    "capitalLng": 149.1281,
+    "population": 447692
+  },
+  {
+    "timezones": [
+      "Europe/Vienna"
+    ],
+    "latlng": [
+      47.33333333,
+      13.33333333
+    ],
+    "name": "Austria",
+    "country_code": "AT",
+    "capital": "Vienna",
+    "continent": "EU",
+    "capitalLat": 48.2064,
+    "capitalLng": 16.3707,
+    "population": 1900547
+  },
+  {
+    "timezones": [
+      "Asia/Baku"
+    ],
+    "latlng": [
+      40.5,
+      47.5
+    ],
+    "name": "Azerbaijan",
+    "country_code": "AZ",
+    "capital": "Baku",
+    "continent": "AS",
+    "capitalLat": 40.3777,
+    "capitalLng": 49.892,
+    "population": 2285729
+  },
+  {
+    "timezones": [
+      "Africa/Bujumbura"
+    ],
+    "latlng": [
+      -3.5,
+      30
+    ],
+    "name": "Burundi",
+    "country_code": "BI",
+    "capital": "Bujumbura",
+    "continent": "AF",
+    "capitalLat": -3.3822,
+    "capitalLng": 29.3644,
+    "population": 898968
+  },
+  {
+    "timezones": [
+      "Europe/Brussels"
+    ],
+    "latlng": [
+      50.83333333,
+      4
+    ],
+    "name": "Belgium",
+    "country_code": "BE",
+    "capital": "Brussels",
+    "continent": "EU",
+    "capitalLat": 50.8467,
+    "capitalLng": 4.3499,
+    "population": 2049510
+  },
+  {
+    "timezones": [
+      "Africa/Porto-Novo"
+    ],
+    "latlng": [
+      9.5,
+      2.25
+    ],
+    "name": "Benin",
+    "country_code": "BJ",
+    "capital": "Porto-Novo",
+    "continent": "AF",
+    "capitalLat": 6.3654,
+    "capitalLng": 2.4183,
+    "population": 685458
+  },
+  {
+    "timezones": [
+      "Africa/Ouagadougou"
+    ],
+    "latlng": [
+      13,
+      -2
+    ],
+    "name": "Burkina Faso",
+    "country_code": "BF",
+    "capital": "Ouagadougou",
+    "continent": "AF",
+    "capitalLat": 12.3642,
+    "capitalLng": -1.5383,
+    "population": 2531381
+  },
+  {
+    "timezones": [
+      "Asia/Dhaka"
+    ],
+    "latlng": [
+      24,
+      90
+    ],
+    "name": "Bangladesh",
+    "country_code": "BD",
+    "capital": "Dhaka",
+    "continent": "AS",
+    "capitalLat": 23.7104,
+    "capitalLng": 90.4074,
+    "population": 19578421
+  },
+  {
+    "timezones": [
+      "Europe/Sofia"
+    ],
+    "latlng": [
+      43,
+      25
+    ],
+    "name": "Bulgaria",
+    "country_code": "BG",
+    "capital": "Sofia",
+    "continent": "EU",
+    "capitalLat": 42.6975,
+    "capitalLng": 23.3242,
+    "population": 1272418
+  },
+  {
+    "timezones": [
+      "Asia/Bahrain"
+    ],
+    "latlng": [
+      26,
+      50.55
+    ],
+    "name": "Bahrain",
+    "country_code": "BH",
+    "capital": "Manama",
+    "continent": "AS",
+    "capitalLat": 26.2154,
+    "capitalLng": 50.5832,
+    "population": 564631
+  },
+  {
+    "timezones": [
+      "America/Nassau"
+    ],
+    "latlng": [
+      24.25,
+      -76
+    ],
+    "name": "Bahamas",
+    "country_code": "BS",
+    "capital": "Nassau",
+    "continent": "NA",
+    "capitalLat": 25.0582,
+    "capitalLng": -77.3431,
+    "population": 279668
+  },
+  {
+    "timezones": [
+      "Europe/Sarajevo"
+    ],
+    "latlng": [
+      44,
+      18
+    ],
+    "name": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "capital": "Sarajevo",
+    "continent": "EU",
+    "capitalLat": 43.8486,
+    "capitalLng": 18.3564,
+    "population": 342577
+  },
+  {
+    "timezones": [
+      "Europe/Minsk"
+    ],
+    "latlng": [
+      53,
+      28
+    ],
+    "name": "Belarus",
+    "country_code": "BY",
+    "capital": "Minsk",
+    "continent": "EU",
+    "capitalLat": 53.9,
+    "capitalLng": 27.5667,
+    "population": 2004672
+  },
+  {
+    "timezones": [
+      "America/Belize"
+    ],
+    "latlng": [
+      17.25,
+      -88.75
+    ],
+    "name": "Belize",
+    "country_code": "BZ",
+    "capital": "Belmopan",
+    "continent": "NA",
+    "capitalLat": 17.25,
+    "capitalLng": -88.7667,
+    "population": 22964
+  },
+  {
+    "timezones": [
+      "America/La_Paz"
+    ],
+    "latlng": [
+      -17,
+      -65
+    ],
+    "name": "Bolivia",
+    "country_code": "BO",
+    "capital": "Sucre",
+    "continent": "SA",
+    "capitalLat": -16.5,
+    "capitalLng": -68.15,
+    "population": 1814087
+  },
+  {
+    "timezones": [
+      "America/Noronha",
+      "America/Belem",
+      "America/Fortaleza",
+      "America/Recife",
+      "America/Araguaina",
+      "America/Maceio",
+      "America/Bahia",
+      "America/Sao_Paulo",
+      "America/Campo_Grande",
+      "America/Cuiaba",
+      "America/Santarem",
+      "America/Porto_Velho",
+      "America/Boa_Vista",
+      "America/Manaus",
+      "America/Eirunepe",
+      "America/Rio_Branco"
+    ],
+    "latlng": [
+      -10,
+      -55
+    ],
+    "name": "Brazil",
+    "country_code": "BR",
+    "capital": "Brasília",
+    "continent": "SA",
+    "capitalLat": -15.7797,
+    "capitalLng": -47.9297,
+    "population": 4469585
+  },
+  {
+    "timezones": [
+      "America/Barbados"
+    ],
+    "latlng": [
+      13.16666666,
+      -59.53333333
+    ],
+    "name": "Barbados",
+    "country_code": "BB",
+    "capital": "Bridgetown",
+    "continent": "NA",
+    "capitalLat": 13.1,
+    "capitalLng": -59.6167,
+    "population": 89201
+  },
+  {
+    "timezones": [
+      "Asia/Brunei"
+    ],
+    "latlng": [
+      4.5,
+      114.66666666
+    ],
+    "name": "Brunei",
+    "country_code": "BN",
+    "capital": "Bandar Seri Begawan",
+    "continent": "AS",
+    "capitalLat": 4.9403,
+    "capitalLng": 114.9481,
+    "population": 40781
+  },
+  {
+    "timezones": [
+      "Asia/Thimphu"
+    ],
+    "latlng": [
+      27.5,
+      90.5
+    ],
+    "name": "Bhutan",
+    "country_code": "BT",
+    "capital": "Thimphu",
+    "continent": "AS",
+    "capitalLat": 27.4661,
+    "capitalLng": 89.6419,
+    "population": 203297
+  },
+  {
+    "timezones": [
+      "Africa/Gaborone"
+    ],
+    "latlng": [
+      -22,
+      24
+    ],
+    "name": "Botswana",
+    "country_code": "BW",
+    "capital": "Gaborone",
+    "continent": "AF",
+    "capitalLat": -24.6545,
+    "capitalLng": 25.9086,
+    "population": 269338
+  },
+  {
+    "timezones": [
+      "Africa/Bangui"
+    ],
+    "latlng": [
+      7,
+      21
+    ],
+    "name": "Central African Republic",
+    "country_code": "CF",
+    "capital": "Bangui",
+    "continent": "AF",
+    "capitalLat": 4.3612,
+    "capitalLng": 18.555,
+    "population": 850946
+  },
+  {
+    "timezones": [
+      "America/St_Johns",
+      "America/Halifax",
+      "America/Glace_Bay",
+      "America/Moncton",
+      "America/Goose_Bay",
+      "America/Blanc-Sablon",
+      "America/Toronto",
+      "America/Nipigon",
+      "America/Thunder_Bay",
+      "America/Iqaluit",
+      "America/Pangnirtung",
+      "America/Atikokan",
+      "America/Winnipeg",
+      "America/Rainy_River",
+      "America/Resolute",
+      "America/Rankin_Inlet",
+      "America/Regina",
+      "America/Swift_Current",
+      "America/Edmonton",
+      "America/Cambridge_Bay",
+      "America/Yellowknife",
+      "America/Inuvik",
+      "America/Creston",
+      "America/Dawson_Creek",
+      "America/Fort_Nelson",
+      "America/Vancouver",
+      "America/Whitehorse",
+      "America/Dawson"
+    ],
+    "latlng": [
+      60,
+      -95
+    ],
+    "name": "Canada",
+    "country_code": "CA",
+    "capital": "Ottawa",
+    "continent": "NA",
+    "capitalLat": 45.4166,
+    "capitalLng": -75.698,
+    "population": 1363159
+  },
+  {
+    "timezones": [
+      "Europe/Zurich"
+    ],
+    "latlng": [
+      47,
+      8
+    ],
+    "name": "Switzerland",
+    "country_code": "CH",
+    "capital": "Bern",
+    "continent": "EU",
+    "capitalLat": 46.9481,
+    "capitalLng": 7.4474,
+    "population": 422153
+  },
+  {
+    "timezones": [
+      "America/Santiago",
+      "Pacific/Easter"
+    ],
+    "latlng": [
+      -30,
+      -71
+    ],
+    "name": "Chile",
+    "country_code": "CL",
+    "capital": "Santiago",
+    "continent": "SA",
+    "capitalLat": -33.4569,
+    "capitalLng": -70.6483,
+    "population": 6680371
+  },
+  {
+    "timezones": [
+      "Asia/Shanghai",
+      "Asia/Urumqi"
+    ],
+    "latlng": [
+      35,
+      105
+    ],
+    "name": "China",
+    "country_code": "CN",
+    "capital": "Beijing",
+    "continent": "AS",
+    "capitalLat": 39.9075,
+    "capitalLng": 116.3972,
+    "population": 19617963
+  },
+  {
+    "timezones": [
+      "Africa/Abidjan"
+    ],
+    "latlng": [
+      8,
+      -5
+    ],
+    "name": "Ivory Coast",
+    "country_code": "CI",
+    "capital": "Yamoussoukro",
+    "continent": "AF",
+    "capitalLat": 5.3453,
+    "capitalLng": -4.0268,
+    "population": 4920776
+  },
+  {
+    "timezones": [
+      "Africa/Douala"
+    ],
+    "latlng": [
+      6,
+      12
+    ],
+    "name": "Cameroon",
+    "country_code": "CM",
+    "capital": "Yaoundé",
+    "continent": "AF",
+    "capitalLat": 3.8667,
+    "capitalLng": 11.5167,
+    "population": 3655656
+  },
+  {
+    "timezones": [
+      "Africa/Kinshasa",
+      "Africa/Lubumbashi"
+    ],
+    "latlng": [
+      0,
+      25
+    ],
+    "name": "DR Congo",
+    "country_code": "CD",
+    "capital": "Kinshasa",
+    "continent": "AF",
+    "capitalLat": -4.3276,
+    "capitalLng": 15.3136,
+    "population": 13171256
+  },
+  {
+    "timezones": [
+      "Africa/Brazzaville"
+    ],
+    "latlng": [
+      -1,
+      15
+    ],
+    "name": "Republic of the Congo",
+    "country_code": "CG",
+    "capital": "Brazzaville",
+    "continent": "AF",
+    "capitalLat": -4.2658,
+    "capitalLng": 15.2832,
+    "population": 2229693
+  },
+  {
+    "timezones": [
+      "America/Bogota"
+    ],
+    "latlng": [
+      4,
+      -72
+    ],
+    "name": "Colombia",
+    "country_code": "CO",
+    "capital": "Bogotá",
+    "continent": "SA",
+    "capitalLat": 4.6097,
+    "capitalLng": -74.0818,
+    "population": 10574409
+  },
+  {
+    "timezones": [
+      "Indian/Comoro"
+    ],
+    "latlng": [
+      -12.16666666,
+      44.25
+    ],
+    "name": "Comoros",
+    "country_code": "KM",
+    "capital": "Moroni",
+    "continent": "AF",
+    "capitalLat": -11.7022,
+    "capitalLng": 43.2551,
+    "population": 62351
+  },
+  {
+    "timezones": [
+      "Atlantic/Cape_Verde"
+    ],
+    "latlng": [
+      16,
+      -24
+    ],
+    "name": "Cape Verde",
+    "country_code": "CV",
+    "capital": "Praia",
+    "continent": "AF",
+    "capitalLat": 14.9215,
+    "capitalLng": -23.5087,
+    "population": 167504
+  },
+  {
+    "timezones": [
+      "America/Costa_Rica"
+    ],
+    "latlng": [
+      10,
+      -84
+    ],
+    "name": "Costa Rica",
+    "country_code": "CR",
+    "capital": "San José",
+    "continent": "NA",
+    "capitalLat": 9.9278,
+    "capitalLng": -84.0807,
+    "population": 1357745
+  },
+  {
+    "timezones": [
+      "America/Havana"
+    ],
+    "latlng": [
+      21.5,
+      -80
+    ],
+    "name": "Cuba",
+    "country_code": "CU",
+    "capital": "Havana",
+    "continent": "NA",
+    "capitalLat": 23.1195,
+    "capitalLng": -82.3785,
+    "population": 2136468
+  },
+  {
+    "timezones": [
+      "Asia/Nicosia"
+    ],
+    "latlng": [
+      35,
+      33
+    ],
+    "name": "Cyprus",
+    "country_code": "CY",
+    "capital": "Nicosia",
+    "continent": "EU",
+    "capitalLat": 35.1595,
+    "capitalLng": 33.3669,
+    "population": 269469
+  },
+  {
+    "timezones": [
+      "Europe/Prague"
+    ],
+    "latlng": [
+      49.75,
+      15.5
+    ],
+    "name": "Czech Republic",
+    "country_code": "CZ",
+    "capital": "Prague",
+    "continent": "EU",
+    "capitalLat": 50.088,
+    "capitalLng": 14.4208,
+    "population": 1291552
+  },
+  {
+    "timezones": [
+      "Europe/Berlin",
+      "Europe/Busingen"
+    ],
+    "latlng": [
+      51,
+      9
+    ],
+    "name": "Germany",
+    "country_code": "DE",
+    "capital": "Berlin",
+    "continent": "EU",
+    "capitalLat": 52.5244,
+    "capitalLng": 13.4105,
+    "population": 3552123
+  },
+  {
+    "timezones": [
+      "Africa/Djibouti"
+    ],
+    "latlng": [
+      11.5,
+      43
+    ],
+    "name": "Djibouti",
+    "country_code": "DJ",
+    "capital": "Djibouti",
+    "continent": "AF",
+    "capitalLat": 11.5877,
+    "capitalLng": 43.1447,
+    "population": 561564
+  },
+  {
+    "timezones": [
+      "America/Dominica"
+    ],
+    "latlng": [
+      15.41666666,
+      -61.33333333
+    ],
+    "name": "Dominica",
+    "country_code": "DM",
+    "capital": "Roseau",
+    "continent": "NA",
+    "capitalLat": 15.3017,
+    "capitalLng": -61.3881,
+    "population": 14942
+  },
+  {
+    "timezones": [
+      "Europe/Copenhagen"
+    ],
+    "latlng": [
+      56,
+      10
+    ],
+    "name": "Denmark",
+    "country_code": "DK",
+    "capital": "Copenhagen",
+    "continent": "EU",
+    "capitalLat": 55.6759,
+    "capitalLng": 12.5655,
+    "population": 1320826
+  },
+  {
+    "timezones": [
+      "America/Santo_Domingo"
+    ],
+    "latlng": [
+      19,
+      -70.66666666
+    ],
+    "name": "Dominican Republic",
+    "country_code": "DO",
+    "capital": "Santo Domingo",
+    "continent": "NA",
+    "capitalLat": 18.4896,
+    "capitalLng": -69.9018,
+    "population": 3172152
+  },
+  {
+    "timezones": [
+      "Africa/Algiers"
+    ],
+    "latlng": [
+      28,
+      3
+    ],
+    "name": "Algeria",
+    "country_code": "DZ",
+    "capital": "Algiers",
+    "continent": "AF",
+    "capitalLat": 36.7525,
+    "capitalLng": 3.042,
+    "population": 2693542
+  },
+  {
+    "timezones": [
+      "America/Guayaquil",
+      "Pacific/Galapagos"
+    ],
+    "latlng": [
+      -2,
+      -77.5
+    ],
+    "name": "Ecuador",
+    "country_code": "EC",
+    "capital": "Quito",
+    "continent": "SA",
+    "capitalLat": -0.2299,
+    "capitalLng": -78.525,
+    "population": 1822397
+  },
+  {
+    "timezones": [
+      "Africa/Cairo"
+    ],
+    "latlng": [
+      27,
+      30
+    ],
+    "name": "Egypt",
+    "country_code": "EG",
+    "capital": "Cairo",
+    "continent": "AF",
+    "capitalLat": 30.0392,
+    "capitalLng": 31.2394,
+    "population": 20076002
+  },
+  {
+    "timezones": [
+      "Africa/Asmara"
+    ],
+    "latlng": [
+      15,
+      39
+    ],
+    "name": "Eritrea",
+    "country_code": "ER",
+    "capital": "Asmara",
+    "continent": "AF",
+    "capitalLat": 15.3333,
+    "capitalLng": 38.9333,
+    "population": 895863
+  },
+  {
+    "timezones": [
+      "Europe/Madrid",
+      "Africa/Ceuta",
+      "Atlantic/Canary"
+    ],
+    "latlng": [
+      40,
+      -4
+    ],
+    "name": "Spain",
+    "country_code": "ES",
+    "capital": "Madrid",
+    "continent": "EU",
+    "capitalLat": 40.4165,
+    "capitalLng": -3.7026,
+    "population": 6497124
+  },
+  {
+    "timezones": [
+      "Europe/Tallinn"
+    ],
+    "latlng": [
+      59,
+      26
+    ],
+    "name": "Estonia",
+    "country_code": "EE",
+    "capital": "Tallinn",
+    "continent": "EU",
+    "capitalLat": 59.437,
+    "capitalLng": 24.7535,
+    "population": 437027
+  },
+  {
+    "timezones": [
+      "Africa/Addis_Ababa"
+    ],
+    "latlng": [
+      8,
+      38
+    ],
+    "name": "Ethiopia",
+    "country_code": "ET",
+    "capital": "Addis Ababa",
+    "continent": "AF",
+    "capitalLat": 9.025,
+    "capitalLng": 38.7469,
+    "population": 4399674
+  },
+  {
+    "timezones": [
+      "Europe/Helsinki"
+    ],
+    "latlng": [
+      64,
+      26
+    ],
+    "name": "Finland",
+    "country_code": "FI",
+    "capital": "Helsinki",
+    "continent": "EU",
+    "capitalLat": 60.1692,
+    "capitalLng": 24.9402,
+    "population": 1279096
+  },
+  {
+    "timezones": [
+      "Pacific/Fiji"
+    ],
+    "latlng": [
+      -18,
+      175
+    ],
+    "name": "Fiji",
+    "country_code": "FJ",
+    "capital": "Suva",
+    "continent": "OC",
+    "capitalLat": -18.1416,
+    "capitalLng": 178.4415,
+    "population": 178339
+  },
+  {
+    "timezones": [
+      "Europe/Paris"
+    ],
+    "latlng": [
+      46,
+      2
+    ],
+    "name": "France",
+    "country_code": "FR",
+    "capital": "Paris",
+    "continent": "EU",
+    "capitalLat": 48.8534,
+    "capitalLng": 2.3488,
+    "population": 10900952
+  },
+  {
+    "timezones": [
+      "Pacific/Chuuk",
+      "Pacific/Pohnpei",
+      "Pacific/Kosrae"
+    ],
+    "latlng": [
+      6.91666666,
+      158.25
+    ],
+    "name": "Micronesia",
+    "country_code": "FM",
+    "capital": "Palikir",
+    "continent": "OC",
+    "capitalLat": 6.9174,
+    "capitalLng": 158.1588,
+    "population": 6996
+  },
+  {
+    "timezones": [
+      "Africa/Libreville"
+    ],
+    "latlng": [
+      -1,
+      11.75
+    ],
+    "name": "Gabon",
+    "country_code": "GA",
+    "capital": "Libreville",
+    "continent": "AF",
+    "capitalLat": 0.3925,
+    "capitalLng": 9.4537,
+    "population": 813489
+  },
+  {
+    "timezones": [
+      "Europe/London"
+    ],
+    "latlng": [
+      54,
+      -2
+    ],
+    "name": "United Kingdom",
+    "country_code": "GB",
+    "capital": "London",
+    "continent": "EU",
+    "capitalLat": 51.5085,
+    "capitalLng": -0.1257,
+    "population": 9046485
+  },
+  {
+    "timezones": [
+      "Asia/Tbilisi"
+    ],
+    "latlng": [
+      42,
+      43.5
+    ],
+    "name": "Georgia",
+    "country_code": "GE",
+    "capital": "Tbilisi",
+    "continent": "AS",
+    "capitalLat": 41.6941,
+    "capitalLng": 44.8337,
+    "population": 1077333
+  },
+  {
+    "timezones": [
+      "Africa/Accra"
+    ],
+    "latlng": [
+      8,
+      -2
+    ],
+    "name": "Ghana",
+    "country_code": "GH",
+    "capital": "Accra",
+    "continent": "AF",
+    "capitalLat": 5.556,
+    "capitalLng": -0.1969,
+    "population": 2439389
+  },
+  {
+    "timezones": [
+      "Africa/Conakry"
+    ],
+    "latlng": [
+      11,
+      -10
+    ],
+    "name": "Guinea",
+    "country_code": "GN",
+    "capital": "Conakry",
+    "continent": "AF",
+    "capitalLat": 9.5716,
+    "capitalLng": -13.6476,
+    "population": 1843121
+  },
+  {
+    "timezones": [
+      "Africa/Banjul"
+    ],
+    "latlng": [
+      13.46666666,
+      -16.56666666
+    ],
+    "name": "Gambia",
+    "country_code": "GM",
+    "capital": "Banjul",
+    "continent": "AF",
+    "capitalLat": 13.4531,
+    "capitalLng": -16.6794,
+    "population": 437161
+  },
+  {
+    "timezones": [
+      "Africa/Bissau"
+    ],
+    "latlng": [
+      12,
+      -15
+    ],
+    "name": "Guinea-Bissau",
+    "country_code": "GW",
+    "capital": "Bissau",
+    "continent": "AF",
+    "capitalLat": 11.8636,
+    "capitalLng": -15.5977,
+    "population": 558399
+  },
+  {
+    "timezones": [
+      "Africa/Malabo"
+    ],
+    "latlng": [
+      2,
+      10
+    ],
+    "name": "Equatorial Guinea",
+    "country_code": "GQ",
+    "capital": "Malabo",
+    "continent": "AF",
+    "capitalLat": 3.75,
+    "capitalLng": 8.7833,
+    "population": 296770
+  },
+  {
+    "timezones": [
+      "Europe/Athens"
+    ],
+    "latlng": [
+      39,
+      22
+    ],
+    "name": "Greece",
+    "country_code": "GR",
+    "capital": "Athens",
+    "continent": "EU",
+    "capitalLat": 37.9534,
+    "capitalLng": 23.749,
+    "population": 3155600
+  },
+  {
+    "timezones": [
+      "America/Grenada"
+    ],
+    "latlng": [
+      12.11666666,
+      -61.66666666
+    ],
+    "name": "Grenada",
+    "country_code": "GD",
+    "capital": "St. George's",
+    "continent": "NA",
+    "capitalLat": 12.0564,
+    "capitalLng": -61.7485,
+    "population": 39297
+  },
+  {
+    "timezones": [
+      "America/Guatemala"
+    ],
+    "latlng": [
+      15.5,
+      -90.25
+    ],
+    "name": "Guatemala",
+    "country_code": "GT",
+    "capital": "Guatemala City",
+    "continent": "NA",
+    "capitalLat": 14.6127,
+    "capitalLng": -90.5307,
+    "population": 2851104
+  },
+  {
+    "timezones": [
+      "America/Guyana"
+    ],
+    "latlng": [
+      5,
+      -59
+    ],
+    "name": "Guyana",
+    "country_code": "GY",
+    "capital": "Georgetown",
+    "continent": "SA",
+    "capitalLat": 6.8045,
+    "capitalLng": -58.1553,
+    "population": 109934
+  },
+  {
+    "timezones": [
+      "America/Tegucigalpa"
+    ],
+    "latlng": [
+      15,
+      -86.5
+    ],
+    "name": "Honduras",
+    "country_code": "HN",
+    "capital": "Tegucigalpa",
+    "continent": "NA",
+    "capitalLat": 14.0818,
+    "capitalLng": -87.2068,
+    "population": 1363041
+  },
+  {
+    "timezones": [
+      "Europe/Zagreb"
+    ],
+    "latlng": [
+      45.16666666,
+      15.5
+    ],
+    "name": "Croatia",
+    "country_code": "HR",
+    "capital": "Zagreb",
+    "continent": "EU",
+    "capitalLat": 45.8144,
+    "capitalLng": 15.978,
+    "population": 685587
+  },
+  {
+    "timezones": [
+      "America/Port-au-Prince"
+    ],
+    "latlng": [
+      19,
+      -72.41666666
+    ],
+    "name": "Haiti",
+    "country_code": "HT",
+    "capital": "Port-au-Prince",
+    "continent": "NA",
+    "capitalLat": 18.5392,
+    "capitalLng": -72.335,
+    "population": 2636763
+  },
+  {
+    "timezones": [
+      "Europe/Budapest"
+    ],
+    "latlng": [
+      47,
+      20
+    ],
+    "name": "Hungary",
+    "country_code": "HU",
+    "capital": "Budapest",
+    "continent": "EU",
+    "capitalLat": 47.498,
+    "capitalLng": 19.0399,
+    "population": 1759497
+  },
+  {
+    "timezones": [
+      "Asia/Jakarta",
+      "Asia/Pontianak",
+      "Asia/Makassar",
+      "Asia/Jayapura"
+    ],
+    "latlng": [
+      -5,
+      120
+    ],
+    "name": "Indonesia",
+    "country_code": "ID",
+    "capital": "Jakarta",
+    "continent": "AS",
+    "capitalLat": -6.2118,
+    "capitalLng": 106.8416,
+    "population": 10516927
+  },
+  {
+    "timezones": [
+      "Asia/Kolkata"
+    ],
+    "latlng": [
+      20,
+      77
+    ],
+    "name": "India",
+    "country_code": "IN",
+    "capital": "New Delhi",
+    "continent": "AS",
+    "capitalLat": 28.6667,
+    "capitalLng": 77.2167,
+    "population": 28513682
+  },
+  {
+    "timezones": [
+      "Europe/Dublin"
+    ],
+    "latlng": [
+      53,
+      -8
+    ],
+    "name": "Ireland",
+    "country_code": "IE",
+    "capital": "Dublin",
+    "continent": "EU",
+    "capitalLat": 53.3331,
+    "capitalLng": -6.2489,
+    "population": 1201426
+  },
+  {
+    "timezones": [
+      "Asia/Tehran"
+    ],
+    "latlng": [
+      32,
+      53
+    ],
+    "name": "Iran",
+    "country_code": "IR",
+    "capital": "Tehran",
+    "continent": "AS",
+    "capitalLat": 35.6944,
+    "capitalLng": 51.4215,
+    "population": 8895947
+  },
+  {
+    "timezones": [
+      "Asia/Baghdad"
+    ],
+    "latlng": [
+      33,
+      44
+    ],
+    "name": "Iraq",
+    "country_code": "IQ",
+    "capital": "Baghdad",
+    "continent": "AS",
+    "capitalLat": 33.3406,
+    "capitalLng": 44.4009,
+    "population": 6811955
+  },
+  {
+    "timezones": [
+      "Atlantic/Reykjavik"
+    ],
+    "latlng": [
+      65,
+      -18
+    ],
+    "name": "Iceland",
+    "country_code": "IS",
+    "capital": "Reykjavik",
+    "continent": "EU",
+    "capitalLat": 64.1355,
+    "capitalLng": -21.8954,
+    "population": 216364
+  },
+  {
+    "timezones": [
+      "Asia/Jerusalem"
+    ],
+    "latlng": [
+      31.47,
+      35.13
+    ],
+    "name": "Israel",
+    "country_code": "IL",
+    "capital": "Jerusalem",
+    "continent": "AS",
+    "capitalLat": 31.769,
+    "capitalLng": 35.2163,
+    "population": 907062
+  },
+  {
+    "timezones": [
+      "Europe/Rome"
+    ],
+    "latlng": [
+      42.83333333,
+      12.83333333
+    ],
+    "name": "Italy",
+    "country_code": "IT",
+    "capital": "Rome",
+    "continent": "EU",
+    "capitalLat": 41.8947,
+    "capitalLng": 12.4811,
+    "population": 4209710
+  },
+  {
+    "timezones": [
+      "America/Jamaica"
+    ],
+    "latlng": [
+      18.25,
+      -77.5
+    ],
+    "name": "Jamaica",
+    "country_code": "JM",
+    "capital": "Kingston",
+    "continent": "NA",
+    "capitalLat": 17.997,
+    "capitalLng": -76.7936,
+    "population": 589083
+  },
+  {
+    "timezones": [
+      "Asia/Amman"
+    ],
+    "latlng": [
+      31,
+      36
+    ],
+    "name": "Jordan",
+    "country_code": "JO",
+    "capital": "Amman",
+    "continent": "AS",
+    "capitalLat": 31.9552,
+    "capitalLng": 35.945,
+    "population": 2064582
+  },
+  {
+    "timezones": [
+      "Asia/Tokyo"
+    ],
+    "latlng": [
+      36,
+      138
+    ],
+    "name": "Japan",
+    "country_code": "JP",
+    "capital": "Tokyo",
+    "continent": "AS",
+    "capitalLat": 35.6895,
+    "capitalLng": 139.6917,
+    "population": 37468302
+  },
+  {
+    "timezones": [
+      "Asia/Almaty",
+      "Asia/Qyzylorda",
+      "Asia/Aqtobe",
+      "Asia/Aqtau",
+      "Asia/Oral"
+    ],
+    "latlng": [
+      48,
+      68
+    ],
+    "name": "Kazakhstan",
+    "country_code": "KZ",
+    "capital": "Astana",
+    "continent": "AS",
+    "capitalLat": 51.1801,
+    "capitalLng": 71.446,
+    "population": 1068113
+  },
+  {
+    "timezones": [
+      "Africa/Nairobi"
+    ],
+    "latlng": [
+      1,
+      38
+    ],
+    "name": "Kenya",
+    "country_code": "KE",
+    "capital": "Nairobi",
+    "continent": "AF",
+    "capitalLat": -1.2833,
+    "capitalLng": 36.8167,
+    "population": 4385853
+  },
+  {
+    "timezones": [
+      "Asia/Bishkek"
+    ],
+    "latlng": [
+      41,
+      75
+    ],
+    "name": "Kyrgyzstan",
+    "country_code": "KG",
+    "capital": "Bishkek",
+    "continent": "AS",
+    "capitalLat": 42.87,
+    "capitalLng": 74.59,
+    "population": 996319
+  },
+  {
+    "timezones": [
+      "Asia/Phnom_Penh"
+    ],
+    "latlng": [
+      13,
+      105
+    ],
+    "name": "Cambodia",
+    "country_code": "KH",
+    "capital": "Phnom Penh",
+    "continent": "AS",
+    "capitalLat": 11.5625,
+    "capitalLng": 104.916,
+    "population": 1952329
+  },
+  {
+    "timezones": [
+      "Pacific/Tarawa",
+      "Pacific/Enderbury",
+      "Pacific/Kiritimati"
+    ],
+    "latlng": [
+      1.41666666,
+      173
+    ],
+    "name": "Kiribati",
+    "country_code": "KI",
+    "capital": "South Tarawa",
+    "continent": "OC",
+    "capitalLat": 1.3272,
+    "capitalLng": 172.9813,
+    "population": 64011
+  },
+  {
+    "timezones": [
+      "America/St_Kitts"
+    ],
+    "latlng": [
+      17.33333333,
+      -62.75
+    ],
+    "name": "Saint Kitts and Nevis",
+    "country_code": "KN",
+    "capital": "Basseterre",
+    "continent": "NA",
+    "capitalLat": 17.2948,
+    "capitalLng": -62.7261,
+    "population": 14434
+  },
+  {
+    "timezones": [
+      "Asia/Seoul"
+    ],
+    "latlng": [
+      37,
+      127.5
+    ],
+    "name": "South Korea",
+    "country_code": "KR",
+    "capital": "Seoul",
+    "capitalLat": 37.5683,
+    "capitalLng": 126.9778,
+    "population": 9963497,
+    "continent": "AS"
+  },
+  {
+    "timezones": [
+      "Asia/Kuwait"
+    ],
+    "latlng": [
+      29.5,
+      45.75
+    ],
+    "name": "Kuwait",
+    "country_code": "KW",
+    "capital": "Kuwait City",
+    "continent": "AS",
+    "capitalLat": 29.3697,
+    "capitalLng": 47.9783,
+    "population": 2989270
+  },
+  {
+    "timezones": [
+      "Asia/Vientiane"
+    ],
+    "latlng": [
+      18,
+      105
+    ],
+    "name": "Laos",
+    "country_code": "LA",
+    "capital": "Vientiane",
+    "continent": "AS",
+    "capitalLat": 17.9667,
+    "capitalLng": 102.6,
+    "population": 664754
+  },
+  {
+    "timezones": [
+      "Asia/Beirut"
+    ],
+    "latlng": [
+      33.83333333,
+      35.83333333
+    ],
+    "name": "Lebanon",
+    "country_code": "LB",
+    "capital": "Beirut",
+    "continent": "AS",
+    "capitalLat": 33.9,
+    "capitalLng": 35.4833,
+    "population": 2385271
+  },
+  {
+    "timezones": [
+      "Africa/Monrovia"
+    ],
+    "latlng": [
+      6.5,
+      -9.5
+    ],
+    "name": "Liberia",
+    "country_code": "LR",
+    "capital": "Monrovia",
+    "continent": "AF",
+    "capitalLat": 6.3005,
+    "capitalLng": -10.7969,
+    "population": 1418300
+  },
+  {
+    "timezones": [
+      "Africa/Tripoli"
+    ],
+    "latlng": [
+      25,
+      17
+    ],
+    "name": "Libya",
+    "country_code": "LY",
+    "capital": "Tripoli",
+    "continent": "AF",
+    "capitalLat": 32.8752,
+    "capitalLng": 13.1875,
+    "population": 1157746
+  },
+  {
+    "timezones": [
+      "America/St_Lucia"
+    ],
+    "latlng": [
+      13.88333333,
+      -60.96666666
+    ],
+    "name": "Saint Lucia",
+    "country_code": "LC",
+    "capital": "Castries",
+    "continent": "NA",
+    "capitalLat": 14.006,
+    "capitalLng": -60.991,
+    "population": 22258
+  },
+  {
+    "timezones": [
+      "Europe/Vaduz"
+    ],
+    "latlng": [
+      47.26666666,
+      9.53333333
+    ],
+    "name": "Liechtenstein",
+    "country_code": "LI",
+    "capital": "Vaduz",
+    "continent": "EU",
+    "capitalLat": 47.1415,
+    "capitalLng": 9.5215,
+    "population": 5470
+  },
+  {
+    "timezones": [
+      "Asia/Colombo"
+    ],
+    "latlng": [
+      7,
+      81
+    ],
+    "name": "Sri Lanka",
+    "country_code": "LK",
+    "capital": "Colombo",
+    "continent": "AS",
+    "capitalLat": 6.9319,
+    "capitalLng": 79.8478,
+    "population": 599821
+  },
+  {
+    "timezones": [
+      "Africa/Maseru"
+    ],
+    "latlng": [
+      -29.5,
+      28.5
+    ],
+    "name": "Lesotho",
+    "country_code": "LS",
+    "capital": "Maseru",
+    "continent": "AF",
+    "capitalLat": -29.3167,
+    "capitalLng": 27.4833,
+    "population": 201851
+  },
+  {
+    "timezones": [
+      "Europe/Vilnius"
+    ],
+    "latlng": [
+      56,
+      24
+    ],
+    "name": "Lithuania",
+    "country_code": "LT",
+    "capital": "Vilnius",
+    "continent": "EU",
+    "capitalLat": 54.6892,
+    "capitalLng": 25.2798,
+    "population": 536055
+  },
+  {
+    "timezones": [
+      "Europe/Luxembourg"
+    ],
+    "latlng": [
+      49.75,
+      6.16666666
+    ],
+    "name": "Luxembourg",
+    "country_code": "LU",
+    "capital": "Luxembourg",
+    "continent": "EU",
+    "capitalLat": 49.6117,
+    "capitalLng": 6.13,
+    "population": 119752
+  },
+  {
+    "timezones": [
+      "Europe/Riga"
+    ],
+    "latlng": [
+      57,
+      25
+    ],
+    "name": "Latvia",
+    "country_code": "LV",
+    "capital": "Riga",
+    "continent": "EU",
+    "capitalLat": 56.946,
+    "capitalLng": 24.1059,
+    "population": 637089
+  },
+  {
+    "timezones": [
+      "Africa/Casablanca"
+    ],
+    "latlng": [
+      32,
+      -5
+    ],
+    "name": "Morocco",
+    "country_code": "MA",
+    "capital": "Rabat",
+    "continent": "AF",
+    "capitalLat": 34.0133,
+    "capitalLng": -6.8326,
+    "population": 1846661
+  },
+  {
+    "timezones": [
+      "Europe/Monaco"
+    ],
+    "latlng": [
+      43.73333333,
+      7.4
+    ],
+    "name": "Monaco",
+    "country_code": "MC",
+    "capital": "Monaco",
+    "continent": "EU",
+    "capitalLat": 43.7333,
+    "capitalLng": 7.4167,
+    "population": 38897
+  },
+  {
+    "timezones": [
+      "Europe/Chisinau"
+    ],
+    "latlng": [
+      47,
+      29
+    ],
+    "name": "Moldova",
+    "country_code": "MD",
+    "capital": "Chișinău",
+    "continent": "EU",
+    "capitalLat": 47.0056,
+    "capitalLng": 28.8575,
+    "population": 509707
+  },
+  {
+    "timezones": [
+      "Indian/Antananarivo"
+    ],
+    "latlng": [
+      -20,
+      47
+    ],
+    "name": "Madagascar",
+    "country_code": "MG",
+    "capital": "Antananarivo",
+    "continent": "AF",
+    "capitalLat": -18.9137,
+    "capitalLng": 47.5361,
+    "population": 3058387
+  },
+  {
+    "timezones": [
+      "Indian/Maldives"
+    ],
+    "latlng": [
+      3.25,
+      73
+    ],
+    "name": "Maldives",
+    "country_code": "MV",
+    "capital": "Malé",
+    "continent": "AS",
+    "capitalLat": 4.1748,
+    "capitalLng": 73.5089,
+    "population": 176851
+  },
+  {
+    "timezones": [
+      "America/Mexico_City",
+      "America/Cancun",
+      "America/Merida",
+      "America/Monterrey",
+      "America/Matamoros",
+      "America/Mazatlan",
+      "America/Chihuahua",
+      "America/Ojinaga",
+      "America/Hermosillo",
+      "America/Tijuana",
+      "America/Bahia_Banderas"
+    ],
+    "latlng": [
+      23,
+      -102
+    ],
+    "name": "Mexico",
+    "country_code": "MX",
+    "capital": "Mexico City",
+    "continent": "NA",
+    "capitalLat": 19.4273,
+    "capitalLng": -99.1419,
+    "population": 21580827
+  },
+  {
+    "timezones": [
+      "Pacific/Majuro",
+      "Pacific/Kwajalein"
+    ],
+    "latlng": [
+      9,
+      168
+    ],
+    "name": "Marshall Islands",
+    "country_code": "MH",
+    "capital": "Majuro",
+    "continent": "OC",
+    "capitalLat": 7.0897,
+    "capitalLng": 171.3803,
+    "population": 30661
+  },
+  {
+    "timezones": [
+      "Europe/Skopje"
+    ],
+    "latlng": [
+      41.83333333,
+      22
+    ],
+    "name": "Macedonia",
+    "country_code": "MK",
+    "capital": "Skopje",
+    "continent": "EU",
+    "capitalLat": 42,
+    "capitalLng": 21.4333,
+    "population": 584208
+  },
+  {
+    "timezones": [
+      "Africa/Bamako"
+    ],
+    "latlng": [
+      17,
+      -4
+    ],
+    "name": "Mali",
+    "country_code": "ML",
+    "capital": "Bamako",
+    "continent": "AF",
+    "capitalLat": 12.65,
+    "capitalLng": -8,
+    "population": 2446749
+  },
+  {
+    "timezones": [
+      "Europe/Malta"
+    ],
+    "latlng": [
+      35.83333333,
+      14.58333333
+    ],
+    "name": "Malta",
+    "country_code": "MT",
+    "capital": "Valletta",
+    "continent": "EU",
+    "capitalLat": 35.8997,
+    "capitalLng": 14.5147,
+    "population": 212768
+  },
+  {
+    "timezones": [
+      "Asia/Rangoon"
+    ],
+    "latlng": [
+      22,
+      98
+    ],
+    "name": "Myanmar",
+    "country_code": "MM",
+    "capital": "Naypyidaw",
+    "continent": "AS",
+    "capitalLat": 19.745,
+    "capitalLng": 96.1297,
+    "population": 500218
+  },
+  {
+    "timezones": [
+      "Europe/Podgorica"
+    ],
+    "latlng": [
+      42.5,
+      19.3
+    ],
+    "name": "Montenegro",
+    "country_code": "ME",
+    "capital": "Podgorica",
+    "continent": "EU",
+    "capitalLat": 42.4411,
+    "capitalLng": 19.2636,
+    "population": 177177
+  },
+  {
+    "timezones": [
+      "Asia/Ulaanbaatar",
+      "Asia/Hovd",
+      "Asia/Choibalsan"
+    ],
+    "latlng": [
+      46,
+      105
+    ],
+    "name": "Mongolia",
+    "country_code": "MN",
+    "capital": "Ulan Bator",
+    "continent": "AS",
+    "capitalLat": 47.9077,
+    "capitalLng": 106.8832,
+    "population": 1520381
+  },
+  {
+    "timezones": [
+      "Africa/Maputo"
+    ],
+    "latlng": [
+      -18.25,
+      35
+    ],
+    "name": "Mozambique",
+    "country_code": "MZ",
+    "capital": "Maputo",
+    "continent": "AF",
+    "capitalLat": -25.9653,
+    "capitalLng": 32.5892,
+    "population": 1101771
+  },
+  {
+    "timezones": [
+      "Africa/Nouakchott"
+    ],
+    "latlng": [
+      20,
+      -12
+    ],
+    "name": "Mauritania",
+    "country_code": "MR",
+    "capital": "Nouakchott",
+    "continent": "AF",
+    "capitalLat": 18.0858,
+    "capitalLng": -15.9785,
+    "population": 1205414
+  },
+  {
+    "timezones": [
+      "Indian/Mauritius"
+    ],
+    "latlng": [
+      -20.28333333,
+      57.55
+    ],
+    "name": "Mauritius",
+    "country_code": "MU",
+    "capital": "Port Louis",
+    "continent": "AF",
+    "capitalLat": -20.1619,
+    "capitalLng": 57.4989,
+    "population": 149365
+  },
+  {
+    "timezones": [
+      "Africa/Blantyre"
+    ],
+    "latlng": [
+      -13.5,
+      34
+    ],
+    "name": "Malawi",
+    "country_code": "MW",
+    "capital": "Lilongwe",
+    "continent": "AF",
+    "capitalLat": -13.9669,
+    "capitalLng": 33.7873,
+    "population": 1029639
+  },
+  {
+    "timezones": [
+      "Asia/Kuala_Lumpur",
+      "Asia/Kuching"
+    ],
+    "latlng": [
+      2.5,
+      112.5
+    ],
+    "name": "Malaysia",
+    "country_code": "MY",
+    "capital": "Kuala Lumpur",
+    "continent": "AS",
+    "capitalLat": 3.1412,
+    "capitalLng": 101.6865,
+    "population": 7563912
+  },
+  {
+    "timezones": [
+      "Africa/Windhoek"
+    ],
+    "latlng": [
+      -22,
+      17
+    ],
+    "name": "Namibia",
+    "country_code": "NA",
+    "capital": "Windhoek",
+    "continent": "AF",
+    "capitalLat": -22.5594,
+    "capitalLng": 17.0832,
+    "population": 404280
+  },
+  {
+    "timezones": [
+      "Africa/Niamey"
+    ],
+    "latlng": [
+      16,
+      8
+    ],
+    "name": "Niger",
+    "country_code": "NE",
+    "capital": "Niamey",
+    "continent": "AF",
+    "capitalLat": 13.5137,
+    "capitalLng": 2.1098,
+    "population": 1213781
+  },
+  {
+    "timezones": [
+      "Africa/Lagos"
+    ],
+    "latlng": [
+      10,
+      8
+    ],
+    "name": "Nigeria",
+    "country_code": "NG",
+    "capital": "Abuja",
+    "continent": "AF",
+    "capitalLat": 9.0574,
+    "capitalLng": 7.4898,
+    "population": 2918518
+  },
+  {
+    "timezones": [
+      "America/Managua"
+    ],
+    "latlng": [
+      13,
+      -85
+    ],
+    "name": "Nicaragua",
+    "country_code": "NI",
+    "capital": "Managua",
+    "continent": "NA",
+    "capitalLat": 12.1328,
+    "capitalLng": -86.2504,
+    "population": 1047923
+  },
+  {
+    "timezones": [
+      "Europe/Amsterdam"
+    ],
+    "latlng": [
+      52.5,
+      5.75
+    ],
+    "name": "Netherlands",
+    "country_code": "NL",
+    "capital": "Amsterdam",
+    "continent": "EU",
+    "capitalLat": 52.374,
+    "capitalLng": 4.8897,
+    "population": 1131690
+  },
+  {
+    "timezones": [
+      "Europe/Oslo"
+    ],
+    "latlng": [
+      62,
+      10
+    ],
+    "name": "Norway",
+    "country_code": "NO",
+    "capital": "Oslo",
+    "continent": "EU",
+    "capitalLat": 59.9127,
+    "capitalLng": 10.7461,
+    "population": 1012225
+  },
+  {
+    "timezones": [
+      "Asia/Kathmandu"
+    ],
+    "latlng": [
+      28,
+      84
+    ],
+    "name": "Nepal",
+    "country_code": "NP",
+    "capital": "Kathmandu",
+    "continent": "AS",
+    "capitalLat": 27.7017,
+    "capitalLng": 85.3206,
+    "population": 1329732
+  },
+  {
+    "timezones": [
+      "Pacific/Nauru"
+    ],
+    "latlng": [
+      -0.53333333,
+      166.91666666
+    ],
+    "name": "Nauru",
+    "country_code": "NR",
+    "capital": "Yaren",
+    "continent": "OC",
+    "capitalLat": -0.5308,
+    "capitalLng": 166.9112,
+    "population": 11312
+  },
+  {
+    "timezones": [
+      "Pacific/Auckland",
+      "Pacific/Chatham"
+    ],
+    "latlng": [
+      -41,
+      174
+    ],
+    "name": "New Zealand",
+    "country_code": "NZ",
+    "capital": "Wellington",
+    "continent": "OC",
+    "capitalLat": -41.2866,
+    "capitalLng": 174.7756,
+    "population": 411346
+  },
+  {
+    "timezones": [
+      "Asia/Muscat"
+    ],
+    "latlng": [
+      21,
+      57
+    ],
+    "name": "Oman",
+    "country_code": "OM",
+    "capital": "Muscat",
+    "continent": "AS",
+    "capitalLat": 23.6139,
+    "capitalLng": 58.5922,
+    "population": 1446563
+  },
+  {
+    "timezones": [
+      "Asia/Karachi"
+    ],
+    "latlng": [
+      30,
+      70
+    ],
+    "name": "Pakistan",
+    "country_code": "PK",
+    "capital": "Islamabad",
+    "continent": "AS",
+    "capitalLat": 33.7035,
+    "capitalLng": 73.0594,
+    "population": 1061412
+  },
+  {
+    "timezones": [
+      "America/Panama"
+    ],
+    "latlng": [
+      9,
+      -80
+    ],
+    "name": "Panama",
+    "country_code": "PA",
+    "capital": "Panama City",
+    "continent": "NA",
+    "capitalLat": 8.9958,
+    "capitalLng": -79.5196,
+    "population": 1783490
+  },
+  {
+    "timezones": [
+      "America/Lima"
+    ],
+    "latlng": [
+      -10,
+      -76
+    ],
+    "name": "Peru",
+    "country_code": "PE",
+    "capital": "Lima",
+    "continent": "SA",
+    "capitalLat": -12.0432,
+    "capitalLng": -77.0282,
+    "population": 10390607
+  },
+  {
+    "timezones": [
+      "Asia/Manila"
+    ],
+    "latlng": [
+      13,
+      122
+    ],
+    "name": "Philippines",
+    "country_code": "PH",
+    "capital": "Manila",
+    "continent": "AS",
+    "capitalLat": 14.6042,
+    "capitalLng": 120.9822,
+    "population": 13482468
+  },
+  {
+    "timezones": [
+      "Pacific/Palau"
+    ],
+    "latlng": [
+      7.5,
+      134.5
+    ],
+    "name": "Palau",
+    "country_code": "PW",
+    "capital": "Ngerulmud",
+    "continent": "OC",
+    "capitalLat": 7.3426,
+    "capitalLng": 134.4789,
+    "population": 11410
+  },
+  {
+    "timezones": [
+      "Pacific/Port_Moresby",
+      "Pacific/Bougainville"
+    ],
+    "latlng": [
+      -6,
+      147
+    ],
+    "name": "Papua New Guinea",
+    "country_code": "PG",
+    "capital": "Port Moresby",
+    "continent": "OC",
+    "capitalLat": -9.4431,
+    "capitalLng": 147.1797,
+    "population": 366862
+  },
+  {
+    "timezones": [
+      "Europe/Warsaw"
+    ],
+    "latlng": [
+      52,
+      20
+    ],
+    "name": "Poland",
+    "country_code": "PL",
+    "capital": "Warsaw",
+    "continent": "EU",
+    "capitalLat": 52.2298,
+    "capitalLng": 21.0118,
+    "population": 1767798
+  },
+  {
+    "timezones": [
+      "Asia/Pyongyang"
+    ],
+    "latlng": [
+      40,
+      127
+    ],
+    "name": "North Korea",
+    "country_code": "KP",
+    "capital": "Pyongyang",
+    "continent": "AS",
+    "capitalLat": 39.0339,
+    "capitalLng": 125.7543,
+    "population": 3037862
+  },
+  {
+    "timezones": [
+      "Europe/Lisbon",
+      "Atlantic/Madeira",
+      "Atlantic/Azores"
+    ],
+    "latlng": [
+      39.5,
+      -8
+    ],
+    "name": "Portugal",
+    "country_code": "PT",
+    "capital": "Lisbon",
+    "continent": "EU",
+    "capitalLat": 38.7169,
+    "capitalLng": -9.1399,
+    "population": 2927316
+  },
+  {
+    "timezones": [
+      "America/Asuncion"
+    ],
+    "latlng": [
+      -23,
+      -58
+    ],
+    "name": "Paraguay",
+    "country_code": "PY",
+    "capital": "Asunción",
+    "continent": "SA",
+    "capitalLat": -25.3007,
+    "capitalLng": -57.6359,
+    "population": 3222199
+  },
+  {
+    "timezones": [
+      "Asia/Qatar"
+    ],
+    "latlng": [
+      25.5,
+      51.25
+    ],
+    "name": "Qatar",
+    "country_code": "QA",
+    "capital": "Doha",
+    "continent": "AS",
+    "capitalLat": 25.2747,
+    "capitalLng": 51.5245,
+    "population": 633401
+  },
+  {
+    "timezones": [
+      "Europe/Bucharest"
+    ],
+    "latlng": [
+      46,
+      25
+    ],
+    "name": "Romania",
+    "country_code": "RO",
+    "capital": "Bucharest",
+    "continent": "EU",
+    "capitalLat": 44.4328,
+    "capitalLng": 26.1043,
+    "population": 1821380
+  },
+  {
+    "timezones": [
+      "Europe/Kaliningrad",
+      "Europe/Moscow",
+      "Europe/Simferopol",
+      "Europe/Volgograd",
+      "Europe/Kirov",
+      "Europe/Astrakhan",
+      "Europe/Samara",
+      "Europe/Ulyanovsk",
+      "Asia/Yekaterinburg",
+      "Asia/Omsk",
+      "Asia/Novosibirsk",
+      "Asia/Barnaul",
+      "Asia/Tomsk",
+      "Asia/Novokuznetsk",
+      "Asia/Krasnoyarsk",
+      "Asia/Irkutsk",
+      "Asia/Chita",
+      "Asia/Yakutsk",
+      "Asia/Khandyga",
+      "Asia/Vladivostok",
+      "Asia/Ust-Nera",
+      "Asia/Magadan",
+      "Asia/Sakhalin",
+      "Asia/Srednekolymsk",
+      "Asia/Kamchatka",
+      "Asia/Anadyr"
+    ],
+    "latlng": [
+      60,
+      100
+    ],
+    "name": "Russia",
+    "country_code": "RU",
+    "capital": "Moscow",
+    "continent": "EU",
+    "capitalLat": 55.755,
+    "capitalLng": 37.6218,
+    "population": 12409738
+  },
+  {
+    "timezones": [
+      "Africa/Kigali"
+    ],
+    "latlng": [
+      -2,
+      30
+    ],
+    "name": "Rwanda",
+    "country_code": "RW",
+    "capital": "Kigali",
+    "continent": "AF",
+    "capitalLat": -1.9474,
+    "capitalLng": 30.0579,
+    "population": 1057836
+  },
+  {
+    "timezones": [
+      "Asia/Riyadh"
+    ],
+    "latlng": [
+      25,
+      45
+    ],
+    "name": "Saudi Arabia",
+    "country_code": "SA",
+    "capital": "Riyadh",
+    "continent": "AS",
+    "capitalLat": 24.6905,
+    "capitalLng": 46.7096,
+    "population": 6906595
+  },
+  {
+    "timezones": [
+      "Africa/Khartoum"
+    ],
+    "latlng": [
+      15,
+      30
+    ],
+    "name": "Sudan",
+    "country_code": "SD",
+    "capital": "Khartoum",
+    "continent": "AF",
+    "capitalLat": 15.5518,
+    "capitalLng": 32.5324,
+    "population": 5534079
+  },
+  {
+    "timezones": [
+      "Africa/Dakar"
+    ],
+    "latlng": [
+      14,
+      -14
+    ],
+    "name": "Senegal",
+    "country_code": "SN",
+    "capital": "Dakar",
+    "continent": "AF",
+    "capitalLat": 14.6937,
+    "capitalLng": -17.4441,
+    "population": 2978419
+  },
+  {
+    "timezones": [
+      "Asia/Singapore"
+    ],
+    "latlng": [
+      1.36666666,
+      103.8
+    ],
+    "name": "Singapore",
+    "country_code": "SG",
+    "capital": "Singapore",
+    "continent": "AS",
+    "capitalLat": 1.2897,
+    "capitalLng": 103.8501,
+    "population": 5791901
+  },
+  {
+    "timezones": [
+      "Pacific/Guadalcanal"
+    ],
+    "latlng": [
+      -8,
+      159
+    ],
+    "name": "Solomon Islands",
+    "country_code": "SB",
+    "capital": "Honiara",
+    "continent": "OC",
+    "capitalLat": -9.4333,
+    "capitalLng": 159.95,
+    "population": 81801
+  },
+  {
+    "timezones": [
+      "Africa/Freetown"
+    ],
+    "latlng": [
+      8.5,
+      -11.5
+    ],
+    "name": "Sierra Leone",
+    "country_code": "SL",
+    "capital": "Freetown",
+    "continent": "AF",
+    "capitalLat": 8.484,
+    "capitalLng": -13.2299,
+    "population": 1135949
+  },
+  {
+    "timezones": [
+      "America/El_Salvador"
+    ],
+    "latlng": [
+      13.83333333,
+      -88.91666666
+    ],
+    "name": "El Salvador",
+    "country_code": "SV",
+    "capital": "San Salvador",
+    "continent": "NA",
+    "capitalLat": 13.6894,
+    "capitalLng": -89.1872,
+    "population": 1106698
+  },
+  {
+    "timezones": [
+      "Europe/San_Marino"
+    ],
+    "latlng": [
+      43.76666666,
+      12.41666666
+    ],
+    "name": "San Marino",
+    "country_code": "SM",
+    "capital": "City of San Marino",
+    "continent": "EU",
+    "capitalLat": 43.9333,
+    "capitalLng": 12.45,
+    "population": 4465
+  },
+  {
+    "timezones": [
+      "Africa/Mogadishu"
+    ],
+    "latlng": [
+      10,
+      49
+    ],
+    "name": "Somalia",
+    "country_code": "SO",
+    "capital": "Mogadishu",
+    "continent": "AF",
+    "capitalLat": 2.0416,
+    "capitalLng": 45.3435,
+    "population": 2081624
+  },
+  {
+    "timezones": [
+      "Europe/Belgrade"
+    ],
+    "latlng": [
+      44,
+      21
+    ],
+    "name": "Serbia",
+    "country_code": "RS",
+    "capital": "Belgrade",
+    "continent": "EU",
+    "capitalLat": 44.8176,
+    "capitalLng": 20.4633,
+    "population": 1389351
+  },
+  {
+    "timezones": [
+      "Africa/Juba"
+    ],
+    "latlng": [
+      7,
+      30
+    ],
+    "name": "South Sudan",
+    "country_code": "SS",
+    "capital": "Juba",
+    "continent": "AF",
+    "capitalLat": 4.8517,
+    "capitalLng": 31.5825,
+    "population": 368914
+  },
+  {
+    "timezones": [
+      "Africa/Sao_Tome"
+    ],
+    "latlng": [
+      1,
+      7
+    ],
+    "name": "São Tomé and Príncipe",
+    "country_code": "ST",
+    "capital": "São Tomé",
+    "continent": "AF",
+    "capitalLat": 0.3365,
+    "capitalLng": 6.7273,
+    "population": 80099
+  },
+  {
+    "timezones": [
+      "America/Paramaribo"
+    ],
+    "latlng": [
+      4,
+      -56
+    ],
+    "name": "Suriname",
+    "country_code": "SR",
+    "capital": "Paramaribo",
+    "continent": "SA",
+    "capitalLat": 5.8664,
+    "capitalLng": -55.1668,
+    "population": 239457
+  },
+  {
+    "timezones": [
+      "Europe/Bratislava"
+    ],
+    "latlng": [
+      48.66666666,
+      19.5
+    ],
+    "name": "Slovakia",
+    "country_code": "SK",
+    "capital": "Bratislava",
+    "continent": "EU",
+    "capitalLat": 48.1482,
+    "capitalLng": 17.1067,
+    "population": 429920
+  },
+  {
+    "timezones": [
+      "Europe/Ljubljana"
+    ],
+    "latlng": [
+      46.11666666,
+      14.81666666
+    ],
+    "name": "Slovenia",
+    "country_code": "SI",
+    "capital": "Ljubljana",
+    "continent": "EU",
+    "capitalLat": 46.0511,
+    "capitalLng": 14.5051,
+    "population": 286491
+  },
+  {
+    "timezones": [
+      "Europe/Stockholm"
+    ],
+    "latlng": [
+      62,
+      15
+    ],
+    "name": "Sweden",
+    "country_code": "SE",
+    "capital": "Stockholm",
+    "continent": "EU",
+    "capitalLat": 59.3326,
+    "capitalLng": 18.0649,
+    "population": 1582968
+  },
+  {
+    "timezones": [
+      "Africa/Mbabane"
+    ],
+    "latlng": [
+      -26.5,
+      31.5
+    ],
+    "name": "Swaziland",
+    "country_code": "SZ",
+    "capital": "Lobamba",
+    "continent": "AF",
+    "capitalLat": -26.3167,
+    "capitalLng": 31.1333,
+    "population": 68010
+  },
+  {
+    "timezones": [
+      "Indian/Mahe"
+    ],
+    "latlng": [
+      -4.58333333,
+      55.66666666
+    ],
+    "name": "Seychelles",
+    "country_code": "SC",
+    "capital": "Victoria",
+    "continent": "AF",
+    "capitalLat": -4.6167,
+    "capitalLng": 55.45,
+    "population": 28091
+  },
+  {
+    "timezones": [
+      "Asia/Damascus"
+    ],
+    "latlng": [
+      35,
+      38
+    ],
+    "name": "Syria",
+    "country_code": "SY",
+    "capital": "Damascus",
+    "continent": "AS",
+    "capitalLat": 33.5086,
+    "capitalLng": 36.3084,
+    "population": 2319545
+  },
+  {
+    "timezones": [
+      "Africa/Ndjamena"
+    ],
+    "latlng": [
+      15,
+      19
+    ],
+    "name": "Chad",
+    "country_code": "TD",
+    "capital": "N'Djamena",
+    "continent": "AF",
+    "capitalLat": 12.1067,
+    "capitalLng": 15.0444,
+    "population": 1322679
+  },
+  {
+    "timezones": [
+      "Africa/Lome"
+    ],
+    "latlng": [
+      8,
+      1.16666666
+    ],
+    "name": "Togo",
+    "country_code": "TG",
+    "capital": "Lomé",
+    "continent": "AF",
+    "capitalLat": 6.1375,
+    "capitalLng": 1.2123,
+    "population": 1745744
+  },
+  {
+    "timezones": [
+      "Asia/Bangkok"
+    ],
+    "latlng": [
+      15,
+      100
+    ],
+    "name": "Thailand",
+    "country_code": "TH",
+    "capital": "Bangkok",
+    "continent": "AS",
+    "capitalLat": 13.722,
+    "capitalLng": 100.5252,
+    "population": 10156316
+  },
+  {
+    "timezones": [
+      "Asia/Dushanbe"
+    ],
+    "latlng": [
+      39,
+      71
+    ],
+    "name": "Tajikistan",
+    "country_code": "TJ",
+    "capital": "Dushanbe",
+    "continent": "AS",
+    "capitalLat": 38.5358,
+    "capitalLng": 68.7791,
+    "population": 872653
+  },
+  {
+    "timezones": [
+      "Asia/Ashgabat"
+    ],
+    "latlng": [
+      40,
+      60
+    ],
+    "name": "Turkmenistan",
+    "country_code": "TM",
+    "capital": "Ashgabat",
+    "continent": "AS",
+    "capitalLat": 37.95,
+    "capitalLng": 58.3833,
+    "population": 810186
+  },
+  {
+    "timezones": [
+      "Asia/Dili"
+    ],
+    "latlng": [
+      -8.83333333,
+      125.91666666
+    ],
+    "name": "Timor-Leste",
+    "country_code": "TL",
+    "capital": "Dili",
+    "continent": "AS",
+    "capitalLat": -8.5601,
+    "capitalLng": 125.5668,
+    "population": 281135
+  },
+  {
+    "timezones": [
+      "Pacific/Tongatapu"
+    ],
+    "latlng": [
+      -20,
+      -175
+    ],
+    "name": "Tonga",
+    "country_code": "TO",
+    "capital": "Nuku'alofa",
+    "continent": "OC",
+    "capitalLat": -21.1394,
+    "capitalLng": -175.2032,
+    "population": 22904
+  },
+  {
+    "timezones": [
+      "America/Port_of_Spain"
+    ],
+    "latlng": [
+      11,
+      -61
+    ],
+    "name": "Trinidad and Tobago",
+    "country_code": "TT",
+    "capital": "Port of Spain",
+    "continent": "NA",
+    "capitalLat": 10.6662,
+    "capitalLng": -61.5166,
+    "population": 544417
+  },
+  {
+    "timezones": [
+      "Africa/Tunis"
+    ],
+    "latlng": [
+      34,
+      9
+    ],
+    "name": "Tunisia",
+    "country_code": "TN",
+    "capital": "Tunis",
+    "continent": "AF",
+    "capitalLat": 36.819,
+    "capitalLng": 10.1658,
+    "population": 2290777
+  },
+  {
+    "timezones": [
+      "Europe/Istanbul"
+    ],
+    "latlng": [
+      39,
+      35
+    ],
+    "name": "Turkey",
+    "country_code": "TR",
+    "capital": "Ankara",
+    "continent": "AS",
+    "capitalLat": 39.9199,
+    "capitalLng": 32.8543,
+    "population": 4919074
+  },
+  {
+    "timezones": [
+      "Pacific/Funafuti"
+    ],
+    "latlng": [
+      -8,
+      178
+    ],
+    "name": "Tuvalu",
+    "country_code": "TV",
+    "capital": "Funafuti",
+    "continent": "OC",
+    "capitalLat": -8.5189,
+    "capitalLng": 179.1991,
+    "population": 7042
+  },
+  {
+    "timezones": [
+      "Africa/Dar_es_Salaam"
+    ],
+    "latlng": [
+      -6,
+      35
+    ],
+    "name": "Tanzania",
+    "country_code": "TZ",
+    "capital": "Dodoma",
+    "continent": "AF",
+    "capitalLat": -6.1722,
+    "capitalLng": 35.7395,
+    "population": 261645
+  },
+  {
+    "timezones": [
+      "Africa/Kampala"
+    ],
+    "latlng": [
+      1,
+      32
+    ],
+    "name": "Uganda",
+    "country_code": "UG",
+    "capital": "Kampala",
+    "continent": "AF",
+    "capitalLat": 0.3163,
+    "capitalLng": 32.5822,
+    "population": 2986352
+  },
+  {
+    "timezones": [
+      "Europe/Kiev",
+      "Europe/Uzhgorod",
+      "Europe/Zaporozhye"
+    ],
+    "latlng": [
+      49,
+      32
+    ],
+    "name": "Ukraine",
+    "country_code": "UA",
+    "capital": "Kiev",
+    "continent": "EU",
+    "capitalLat": 50.4454,
+    "capitalLng": 30.5186,
+    "population": 2956706
+  },
+  {
+    "timezones": [
+      "America/Montevideo"
+    ],
+    "latlng": [
+      -33,
+      -56
+    ],
+    "name": "Uruguay",
+    "country_code": "UY",
+    "capital": "Montevideo",
+    "continent": "SA",
+    "capitalLat": -34.8335,
+    "capitalLng": -56.1674,
+    "population": 1736989
+  },
+  {
+    "timezones": [
+      "America/New_York",
+      "America/Detroit",
+      "America/Kentucky/Louisville",
+      "America/Kentucky/Monticello",
+      "America/Indiana/Indianapolis",
+      "America/Indiana/Vincennes",
+      "America/Indiana/Winamac",
+      "America/Indiana/Marengo",
+      "America/Indiana/Petersburg",
+      "America/Indiana/Vevay",
+      "America/Chicago",
+      "America/Indiana/Tell_City",
+      "America/Indiana/Knox",
+      "America/Menominee",
+      "America/North_Dakota/Center",
+      "America/North_Dakota/New_Salem",
+      "America/North_Dakota/Beulah",
+      "America/Denver",
+      "America/Boise",
+      "America/Phoenix",
+      "America/Los_Angeles",
+      "America/Anchorage",
+      "America/Juneau",
+      "America/Sitka",
+      "America/Metlakatla",
+      "America/Yakutat",
+      "America/Nome",
+      "America/Adak",
+      "Pacific/Honolulu"
+    ],
+    "latlng": [
+      38,
+      -97
+    ],
+    "name": "United States",
+    "country_code": "US",
+    "capital": "Washington D.C.",
+    "continent": "NA",
+    "capitalLat": 38.8951,
+    "capitalLng": -77.0364,
+    "population": 5206593
+  },
+  {
+    "timezones": [
+      "Asia/Samarkand",
+      "Asia/Tashkent"
+    ],
+    "latlng": [
+      41,
+      64
+    ],
+    "name": "Uzbekistan",
+    "country_code": "UZ",
+    "capital": "Tashkent",
+    "continent": "AS",
+    "capitalLat": 41.2647,
+    "capitalLng": 69.2163,
+    "population": 2463969
+  },
+  {
+    "timezones": [
+      "America/St_Vincent"
+    ],
+    "latlng": [
+      13.25,
+      -61.2
+    ],
+    "name": "Saint Vincent and the Grenadines",
+    "country_code": "VC",
+    "capital": "Kingstown",
+    "continent": "NA",
+    "capitalLat": 13.1587,
+    "capitalLng": -61.2248,
+    "population": 26636
+  },
+  {
+    "timezones": [
+      "America/Caracas"
+    ],
+    "latlng": [
+      8,
+      -66
+    ],
+    "name": "Venezuela",
+    "country_code": "VE",
+    "capital": "Caracas",
+    "continent": "SA",
+    "capitalLat": 10.488,
+    "capitalLng": -66.8792,
+    "population": 2934560
+  },
+  {
+    "timezones": [
+      "Asia/Ho_Chi_Minh"
+    ],
+    "latlng": [
+      16.16666666,
+      107.83333333
+    ],
+    "name": "Vietnam",
+    "country_code": "VN",
+    "capital": "Hanoi",
+    "continent": "AS",
+    "capitalLat": 21.0245,
+    "capitalLng": 105.8412,
+    "population": 4282738
+  },
+  {
+    "timezones": [
+      "Pacific/Efate"
+    ],
+    "latlng": [
+      -16,
+      167
+    ],
+    "name": "Vanuatu",
+    "country_code": "VU",
+    "capital": "Port Vila",
+    "continent": "OC",
+    "capitalLat": -17.7338,
+    "capitalLng": 168.3219,
+    "population": 52690
+  },
+  {
+    "timezones": [
+      "Pacific/Apia"
+    ],
+    "latlng": [
+      -13.58333333,
+      -172.33333333
+    ],
+    "name": "Samoa",
+    "country_code": "WS",
+    "capital": "Apia",
+    "continent": "OC",
+    "capitalLat": -13.8333,
+    "capitalLng": -171.7667,
+    "population": 36066
+  },
+  {
+    "timezones": [
+      "Asia/Aden"
+    ],
+    "latlng": [
+      15,
+      48
+    ],
+    "name": "Yemen",
+    "country_code": "YE",
+    "capital": "Sana'a",
+    "continent": "AS",
+    "capitalLat": 15.3531,
+    "capitalLng": 44.2078,
+    "population": 2779317
+  },
+  {
+    "timezones": [
+      "Africa/Johannesburg"
+    ],
+    "latlng": [
+      -29,
+      24
+    ],
+    "name": "South Africa",
+    "country_code": "ZA",
+    "capital": "Pretoria",
+    "continent": "AF",
+    "capitalLat": -33.9258,
+    "capitalLng": 18.4232,
+    "population": 4430367
+  },
+  {
+    "timezones": [
+      "Africa/Lusaka"
+    ],
+    "latlng": [
+      -15,
+      30
+    ],
+    "name": "Zambia",
+    "country_code": "ZM",
+    "capital": "Lusaka",
+    "continent": "AF",
+    "capitalLat": -15.4134,
+    "capitalLng": 28.2771,
+    "population": 2523844
+  },
+  {
+    "timezones": [
+      "Africa/Harare"
+    ],
+    "latlng": [
+      -20,
+      30
+    ],
+    "name": "Zimbabwe",
+    "country_code": "ZW",
+    "capital": "Harare",
+    "continent": "AF",
+    "capitalLat": -17.8294,
+    "capitalLng": 31.0539,
+    "population": 1515016
+  }
+]
