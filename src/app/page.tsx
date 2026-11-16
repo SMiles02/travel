@@ -7,6 +7,8 @@ import FlightPaths from "@/components/flight-paths";
 import ScratchMapLayer from "@/components/scratch-map-layer";
 import ScratchMapCounter from "@/components/scratch-map-counter";
 import FlightList from "@/components/flight-list";
+import FlightStatsPanel from "@/components/flight-stats";
+import type { FlightPanel } from "@/components/flight-panel-switch";
 import MapLabels from "@/components/map-labels";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -27,6 +29,7 @@ export default function Home() {
   const router = useRouter();
   const [viewMode, setViewMode] = useState<ViewMode>("gallery");
   const [selectedYear, setSelectedYear] = useState<string>(ALL_YEARS);
+  const [flightPanel, setFlightPanel] = useState<FlightPanel>("list");
   const [hoveredFlightKey, setHoveredFlightKey] = useState<string | null>(null);
   const [selectedFlightKey, setSelectedFlightKey] = useState<string | null>(
     null,
@@ -120,7 +123,9 @@ export default function Home() {
       </div>
 
       <FlightList
-        active={viewMode === "flights"}
+        active={viewMode === "flights" && flightPanel === "list"}
+        panel={flightPanel}
+        onPanelChange={setFlightPanel}
         selectedYear={selectedYear}
         hoveredKey={hoveredFlightKey}
         selectedKey={selectedFlightKey}
@@ -128,6 +133,13 @@ export default function Home() {
         onSelect={(key) =>
           setSelectedFlightKey((prev) => (prev === key ? null : key))
         }
+      />
+
+      <FlightStatsPanel
+        active={viewMode === "flights" && flightPanel === "stats"}
+        panel={flightPanel}
+        onPanelChange={setFlightPanel}
+        selectedYear={selectedYear}
       />
 
       {/* Globe map - full screen container, globe positioned lower */}

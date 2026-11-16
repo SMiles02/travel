@@ -7,6 +7,10 @@ import {
   flightKey,
   getFlightsForYear,
 } from "@/lib/flights-by-year";
+import { haversineKm } from "@/lib/flight-stats";
+import FlightPanelSwitch, {
+  type FlightPanel,
+} from "@/components/flight-panel-switch";
 
 const COUNT_DURATION_MS = 1500;
 
@@ -14,22 +18,10 @@ function easeOutCubic(t: number) {
   return 1 - Math.pow(1 - t, 3);
 }
 
-// Great-circle distance in km between two [lng, lat] points.
-function haversineKm(a: [number, number], b: [number, number]) {
-  const R = 6371;
-  const toRad = (d: number) => (d * Math.PI) / 180;
-  const dLat = toRad(b[1] - a[1]);
-  const dLng = toRad(b[0] - a[0]);
-  const lat1 = toRad(a[1]);
-  const lat2 = toRad(b[1]);
-  const h =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(h));
-}
-
 type FlightListProps = {
   active: boolean;
+  panel: FlightPanel;
+  onPanelChange: (panel: FlightPanel) => void;
   selectedYear: string;
   hoveredKey: string | null;
   selectedKey: string | null;
@@ -43,6 +35,8 @@ export { flightKey };
 
 export default function FlightList({
   active,
+  panel,
+  onPanelChange,
   selectedYear,
   hoveredKey,
   selectedKey,
@@ -86,16 +80,19 @@ export default function FlightList({
     selectedYear === ALL_YEARS ? "All years" : selectedYear;
 
   return (
-    <div className="pointer-events-auto absolute top-6 right-6 z-10 w-[300px]">
+    <div className="pointer-events-auto absolute top-6 right-6 z-20 w-[340px]">
       <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between gap-6 px-5 pt-4 pb-3">
-          <div
-            className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/60"
-            style={monoFont}
-          >
-            <Plane className="h-3.5 w-3.5 -rotate-45" />
-            Itinerary {itineraryLabel}
+          <div className="flex flex-col gap-2">
+            <FlightPanelSwitch panel={panel} onChange={onPanelChange} />
+            <div
+              className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/60"
+              style={monoFont}
+            >
+              <Plane className="h-3.5 w-3.5 -rotate-45" />
+              Itinerary {itineraryLabel}
+            </div>
           </div>
           <span
             className="text-xs tracking-[0.12em] text-white/45 tabular-nums"
