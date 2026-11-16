@@ -480,37 +480,64 @@ function GameMap({
     if (!map) return;
 
     const hideLabels = () => {
+      if (!map.isStyleLoaded()) return;
+
+      // Mapbox Standard keeps country and city names behind basemap config.
+      // Layout visibility alone is reset when that style reloads.
+      for (const key of [
+        "showPlaceLabels",
+        "showPointOfInterestLabels",
+        "showRoadLabels",
+        "showTransitLabels",
+        "showLandmarkIconLabels",
+        "showIndoorLabels",
+      ]) {
+        try {
+          if (map.getConfigProperty("basemap", key) !== false) {
+            map.setConfigProperty("basemap", key, false);
+          }
+        } catch {
+          // Custom styles have no basemap config
+        }
+      }
+
       try {
         const style = map.getStyle();
-        if (!style || !style.layers) return;
+        if (!style?.layers) return;
 
-        style.layers.forEach((layer) => {
-          if (
-            layer.type === "symbol" &&
-            layer.id &&
-            (layer.id.includes("country") ||
-              layer.id.includes("place-label") ||
-              layer.id.includes("country-label"))
-          ) {
-            try {
-              map.setLayoutProperty(layer.id, "visibility", "none");
-            } catch (e) {
-              // Layer might not exist or already be hidden
-            }
+        for (const layer of style.layers) {
+          if (layer.type !== "symbol" || !layer.id) continue;
+          const id = layer.id.toLowerCase();
+          const hidesAnswer =
+            id.includes("country-label") ||
+            id.includes("country_label") ||
+            id.includes("continent") ||
+            id.includes("state-label") ||
+            id.includes("settlement") ||
+            id.includes("place-label") ||
+            id.includes("place_label") ||
+            id.includes("airport-label") ||
+            id.includes("poi-label");
+          if (!hidesAnswer) continue;
+          try {
+            map.setLayoutProperty(layer.id, "visibility", "none");
+          } catch {
+            // Layer may not support visibility changes
           }
-        });
+        }
       } catch (e) {
         console.warn("Error hiding labels:", e);
       }
     };
 
-    if (!map.isStyleLoaded()) {
-      map.once("load", () => {
-        hideLabels();
-      });
-    } else {
-      hideLabels();
-    }
+    hideLabels();
+    map.on("load", hideLabels);
+    map.on("style.load", hideLabels);
+
+    return () => {
+      map.off("load", hideLabels);
+      map.off("style.load", hideLabels);
+    };
   }, [map]);
 
   // Setup guessed countries fill layer
