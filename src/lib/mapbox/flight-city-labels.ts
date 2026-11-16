@@ -12,6 +12,11 @@ const LABEL_CITY: Partial<Record<CityName, CityName>> = {
   "Toronto Pearson": "Toronto",
 };
 
+/** City shown for an airport endpoint, or the name itself when it is already a city. */
+export function flightCityLabel(name: string): string {
+  return LABEL_CITY[name as CityName] ?? name;
+}
+
 export type FlightCityLabel = {
   name: string;
   coordinates: Coordinate;
@@ -24,8 +29,7 @@ export function getFlightCityLabels(): FlightCityLabel[] {
   for (const yearFlights of Object.values(flights)) {
     for (const flight of yearFlights) {
       for (const endpoint of [flight.originName, flight.destinationName]) {
-        const cityName = (LABEL_CITY[endpoint as CityName] ??
-          endpoint) as CityName;
+        const cityName = flightCityLabel(endpoint) as CityName;
         const city = cities[cityName];
         if (!city || labels.has(cityName)) continue;
         labels.set(cityName, {

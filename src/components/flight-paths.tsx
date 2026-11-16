@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useMap } from "@/context/map-context";
 import * as turf from "@turf/turf";
 import { flightKey, getFlightsForYear } from "@/lib/flights-by-year";
+import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
 import { isMapStyleReady } from "@/lib/mapbox/style-ready";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
@@ -239,8 +240,12 @@ export default function FlightPaths({
 
           for (const feature of e.features) {
             const key = (feature.properties?.key as string) || "";
-            const origin = feature.properties?.origin || "Unknown";
-            const destination = feature.properties?.destination || "Unknown";
+            const origin = flightCityLabel(
+              feature.properties?.origin || "Unknown",
+            );
+            const destination = flightCityLabel(
+              feature.properties?.destination || "Unknown",
+            );
             const routeId = `${origin}→${destination}`;
             const existing = groups.get(routeId);
             if (existing) {
