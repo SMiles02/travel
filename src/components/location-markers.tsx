@@ -138,27 +138,27 @@ export default function LocationMarkers({ viewMode }: LocationMarkersProps) {
 
   return (
     <div
-      className={`fixed top-6 right-6 z-3000 pointer-events-auto transition-all duration-300 ${
+      className={`pointer-events-auto fixed z-30 transition-all duration-300 inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 ${
         isCardVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
       }`}
     >
       <div
         ref={cardRef}
-        className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-2xl shadow-2xl w-[500px] max-w-[90vw] overflow-hidden"
+        className="w-auto overflow-hidden rounded-2xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-sm md:w-[500px]"
       >
         {currentImage ? (
           <img
             src={currentImage}
             alt={`${selectedLocation.name} ${currentImageIndex + 1}`}
-            className="w-full h-[400px] object-cover"
+            className="h-48 w-full object-cover md:h-[400px]"
           />
         ) : (
-          <div className="w-full h-[400px] bg-gray-50 border-b border-white/20 flex items-center justify-center">
+          <div className="flex h-48 w-full items-center justify-center border-b border-white/20 bg-gray-50 md:h-[400px]">
             <span className="text-gray-400 text-sm">No image available</span>
           </div>
         )}
         <div className="flex items-center justify-between pl-6 pr-4 py-4">
-          <h2 className="text-3xl font-bold text-white uppercase">
+          <h2 className="text-2xl font-bold uppercase text-white md:text-3xl">
             <ShuffleText
               text={selectedLocation.name}
               style={{ fontFamily: "var(--font-space-mono), monospace" }}

@@ -253,12 +253,12 @@ export default function GamePage() {
   };
 
   return (
-    <div className="w-screen h-screen relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-1/3 z-10 pointer-events-auto">
-        <div className="p-6 flex items-center gap-4">
+    <div className="relative h-dvh w-screen overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10">
+        <div className="flex flex-wrap items-center gap-2 p-3 md:gap-4 md:p-6">
           <button
             onClick={() => router.push("/")}
-            className="h-9 px-2 py-1 bg-black/40 backdrop-blur-sm border border-white/20 rounded-md text-white/80 hover:text-white hover:bg-white/20 transition-colors text-sm font-medium flex items-center gap-1.5"
+            className="pointer-events-auto flex h-9 items-center gap-1.5 rounded-md border border-white/20 bg-black/40 px-2 py-1 text-sm font-medium text-white/80 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white"
           >
             <ArrowLeft className="h-4 w-4" />
             Go back
@@ -268,7 +268,7 @@ export default function GamePage() {
             onValueChange={(value) => {
               setGameMode(value as "countries" | "capitals");
             }}
-            className="w-auto"
+            className="pointer-events-auto w-auto"
           >
             <TabsList className="bg-black/40 backdrop-blur-sm border border-white/20">
               <TabsTrigger
@@ -289,7 +289,7 @@ export default function GamePage() {
             value={selectedContinent}
             onValueChange={setSelectedContinent}
           >
-            <SelectTrigger className="h-9! w-[180px] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80">
+            <SelectTrigger className="pointer-events-auto h-9! w-[9.5rem] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80 md:w-[180px]">
               <SelectValue placeholder="Select continent" />
             </SelectTrigger>
             <SelectContent className="bg-black/40 backdrop-blur-sm border border-white/20">
@@ -337,7 +337,7 @@ export default function GamePage() {
               </SelectItem>
             </SelectContent>
           </Select>
-          <div className="text-white/80 text-sm">
+          <div className="text-sm text-white/80">
             Score: {score} | Round: {round}
           </div>
         </div>
@@ -387,7 +387,7 @@ export default function GamePage() {
 
       {/* Feedback card */}
       <div
-        className={`absolute bottom-32 left-1/2 transform -translate-x-1/2 z-3000 pointer-events-none transition-all duration-300 ${
+        className={`pointer-events-none absolute bottom-36 left-1/2 z-30 w-[min(calc(100%-2rem),24rem)] -translate-x-1/2 text-center transition-all duration-300 ${
           isCorrect !== null
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"
@@ -421,10 +421,10 @@ export default function GamePage() {
       </div>
 
       {/* Input form */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-3000 pointer-events-auto">
+      <div className="pointer-events-auto absolute bottom-3 left-1/2 z-30 w-[calc(100%-1.5rem)] max-w-lg -translate-x-1/2 md:bottom-6">
         <form
           onSubmit={handleSubmit}
-          className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg p-4 flex flex-col gap-3"
+          className="flex flex-col gap-3 rounded-lg border border-white/20 bg-black/40 p-4 backdrop-blur-sm"
         >
           {gameMode === "capitals" && currentCountry && countryData && (
             <div
@@ -434,7 +434,7 @@ export default function GamePage() {
               {countryData.names[currentCountry]}
             </div>
           )}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <input
               ref={inputRef}
               type="text"
@@ -445,7 +445,7 @@ export default function GamePage() {
                   ? "Enter capital city..."
                   : "Enter country name..."
               }
-              className="bg-transparent border border-white/20 rounded-md px-4 py-2 text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 min-w-[300px]"
+              className="min-w-0 flex-1 rounded-md border border-white/20 bg-transparent px-4 py-2 text-white placeholder:text-white/50 focus:border-white/40 focus:outline-none md:min-w-[300px]"
               disabled={isCorrect === true}
               autoFocus
             />

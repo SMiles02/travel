@@ -50,11 +50,10 @@ export default function Home() {
   }, [selectedYear, viewMode]);
 
   return (
-    <div className="w-screen h-screen relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-1/3 z-10 pointer-events-auto">
-        {/* Mode Tabs */}
-        <div className="p-6 flex items-start justify-between gap-2">
-          <div className="flex items-center gap-2">
+    <div className="relative h-dvh w-screen overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10">
+        <div className="flex flex-wrap items-start justify-between gap-2 p-3 md:p-6">
+          <div className="pointer-events-auto flex flex-wrap items-center gap-2">
             <Tabs
               value={viewMode}
               onValueChange={handleTabChange}
@@ -66,35 +65,35 @@ export default function Home() {
                   className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
                 >
                   <Images className=" h-4 w-4" />
-                  Gallery
+                  <span className="sr-only md:not-sr-only">Gallery</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="scratch-map"
                   className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
                 >
                   <Map className="h-4 w-4" />
-                  Scratch Map
+                  <span className="sr-only md:not-sr-only">Scratch Map</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="flights"
                   className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
                 >
                   <Plane className="h-4 w-4" />
-                  Flights
+                  <span className="sr-only md:not-sr-only">Flights</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="game"
                   className="text-white/80 hover:text-white data-[state=active]:bg-white/20 data-[state=active]:text-white"
                 >
                   <Gamepad2 className="h-4 w-4" />
-                  Game
+                  <span className="sr-only md:not-sr-only">Game</span>
                 </TabsTrigger>
               </TabsList>
             </Tabs>
 
             {viewMode === "flights" && (
               <Select value={selectedYear} onValueChange={setSelectedYear}>
-                <SelectTrigger className="h-9! w-[130px] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80">
+                <SelectTrigger className="h-9! w-[7.5rem] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80 md:w-[130px]">
                   <SelectValue placeholder="Select year" />
                 </SelectTrigger>
                 <SelectContent className="bg-black/40 backdrop-blur-sm border border-white/20">

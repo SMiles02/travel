@@ -43,12 +43,15 @@ export default function MapProvider({
 
     mapboxgl.accessToken = token;
 
+    const narrow = mapContainerRef.current.clientWidth < 768;
     const mapInstance = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: styleId,
-      center: [initialViewState.longitude, initialViewState.latitude],
-      zoom: initialViewState.zoom,
-      pitch: initialViewState.pitch ?? 0,
+      center: narrow
+        ? [initialViewState.longitude, 28]
+        : [initialViewState.longitude, initialViewState.latitude],
+      zoom: narrow ? 2.5 : initialViewState.zoom,
+      pitch: narrow ? 0 : (initialViewState.pitch ?? 0),
       minZoom: 2.5,
       attributionControl: false,
       logoPosition: "bottom-right",

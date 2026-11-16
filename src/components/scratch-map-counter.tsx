@@ -61,7 +61,7 @@ export default function ScratchMapCounter({ active }: ScratchMapCounterProps) {
         visible ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
       }`}
     >
-      <div className="relative bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden min-w-[280px]">
+      <div className="relative w-full min-w-0 overflow-hidden rounded-lg border border-white/20 bg-black/40 backdrop-blur-sm md:min-w-[280px] md:w-auto">
         {/* Header */}
         <div className="flex items-center justify-between gap-6 px-6 pt-4 pb-3">
           <div

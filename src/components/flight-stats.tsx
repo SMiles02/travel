@@ -131,7 +131,7 @@ export default function FlightStatsPanel({
   if (!active) return null;
 
   return (
-    <div className="pointer-events-auto absolute top-6 right-6 z-20 w-[340px] max-h-[calc(100vh-3rem)] overflow-y-auto">
+    <div className="pointer-events-auto absolute z-20 w-auto max-h-[55dvh] overflow-y-auto overscroll-contain inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-[calc(100dvh-3rem)] md:w-[340px]">
       <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden">
         <div className="flex items-center justify-between gap-6 px-5 pt-4 pb-3">
           <div className="flex flex-col gap-2">

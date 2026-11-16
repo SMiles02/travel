@@ -80,8 +80,8 @@ export default function FlightList({
     selectedYear === ALL_YEARS ? "All years" : selectedYear;
 
   return (
-    <div className="pointer-events-auto absolute top-6 right-6 z-20 w-[340px]">
-      <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden">
+    <div className="pointer-events-auto absolute z-20 flex max-h-[55dvh] w-auto flex-col inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-none md:w-[340px]">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-white/20 bg-black/40 backdrop-blur-sm md:block md:flex-none">
         {/* Header */}
         <div className="flex items-center justify-between gap-6 px-5 pt-4 pb-3">
           <div className="flex flex-col gap-2">
@@ -118,7 +118,7 @@ export default function FlightList({
             No flights logged
           </div>
         ) : (
-          <ul className="max-h-[50vh] overflow-y-auto px-3 py-3 flex flex-col gap-1">
+          <ul className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-3 py-3 md:max-h-[50vh] md:flex-none">
             {flights.map((flight, index) => {
               const color = flight.upcoming ? "#f59e0b" : "#3b82f6";
               const key = flightKey(flight);
@@ -179,7 +179,7 @@ export default function FlightList({
 
       {/* Distance card */}
       {flights.length > 0 && (
-        <div className="mt-3 bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2.5 flex items-center justify-between gap-6">
+        <div className="mt-3 flex shrink-0 items-center justify-between gap-6 rounded-lg border border-white/20 bg-black/40 px-4 py-2.5 backdrop-blur-sm">
           <span
             className="text-xs uppercase tracking-[0.18em] text-white/60"
             style={monoFont}

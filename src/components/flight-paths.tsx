@@ -44,11 +44,9 @@ export default function FlightPaths({
           const handlers = (map as any)._flightPathHandlers;
           if (handlers) {
             map.off("mousemove", "flight-paths-hover", handlers.pathMousemove);
-            map.off(
-              "mouseleave",
-              "flight-paths-hover",
-              handlers.pathMouseleave,
-            );
+            map.off("mouseleave", "flight-paths-hover", handlers.pathMouseleave);
+            map.off("click", "flight-paths-hover", handlers.pathClick);
+            map.off("click", handlers.mapClick);
             delete (map as any)._flightPathHandlers;
           }
           for (const id of [
@@ -76,6 +74,8 @@ export default function FlightPaths({
         if (handlers) {
           map.off("mousemove", "flight-paths-hover", handlers.pathMousemove);
           map.off("mouseleave", "flight-paths-hover", handlers.pathMouseleave);
+          map.off("click", "flight-paths-hover", handlers.pathClick);
+          map.off("click", handlers.mapClick);
           delete (map as any)._flightPathHandlers;
         }
         for (const id of [
@@ -222,7 +222,15 @@ export default function FlightPaths({
           yearFlights.map((p, i) => [flightKey(p), i]),
         );
 
-        const handlePathMouseMove = (e: mapboxgl.MapLayerMouseEvent) => {
+        let pinned = false;
+
+        const clearTooltip = () => {
+          setTooltip({ show: false, routes: [], x: 0, y: 0 });
+          onHoverChange(null);
+          map.getCanvas().style.cursor = "";
+        };
+
+        const showRoutes = (e: mapboxgl.MapLayerMouseEvent) => {
           if (!e.features || e.features.length === 0) return;
 
           // Group identical origin→destination legs (flown many times)
@@ -282,17 +290,41 @@ export default function FlightPaths({
           map.getCanvas().style.cursor = "pointer";
         };
 
+        const handlePathMouseMove = (e: mapboxgl.MapLayerMouseEvent) => {
+          if (pinned) return;
+          showRoutes(e);
+        };
+
         const handlePathMouseLeave = () => {
-          setTooltip({ show: false, routes: [], x: 0, y: 0 });
-          onHoverChange(null);
-          map.getCanvas().style.cursor = "";
+          if (pinned) return;
+          clearTooltip();
+        };
+
+        const handlePathClick = (e: mapboxgl.MapLayerMouseEvent) => {
+          if (!window.matchMedia("(pointer: coarse)").matches) return;
+          pinned = true;
+          showRoutes(e);
+        };
+
+        const handleMapClick = (e: mapboxgl.MapMouseEvent) => {
+          if (!map.getLayer("flight-paths-hover")) return;
+          const features = map.queryRenderedFeatures(e.point, {
+            layers: ["flight-paths-hover"],
+          });
+          if (features.length > 0) return;
+          pinned = false;
+          clearTooltip();
         };
 
         map.on("mousemove", "flight-paths-hover", handlePathMouseMove);
         map.on("mouseleave", "flight-paths-hover", handlePathMouseLeave);
+        map.on("click", "flight-paths-hover", handlePathClick);
+        map.on("click", handleMapClick);
         (map as any)._flightPathHandlers = {
           pathMousemove: handlePathMouseMove,
           pathMouseleave: handlePathMouseLeave,
+          pathClick: handlePathClick,
+          mapClick: handleMapClick,
         };
       } catch (e) {
         console.warn("Error adding flight paths:", e);
@@ -340,10 +372,18 @@ export default function FlightPaths({
       Math.max(flight.origin[1], flight.destination[1]),
     ];
 
+    const narrow = window.innerWidth < 768;
     try {
       map.fitBounds([sw, ne], {
-        padding: { top: 120, bottom: 120, left: 120, right: 360 },
-        maxZoom: 5,
+        padding: narrow
+          ? {
+              top: 96,
+              bottom: Math.round(window.innerHeight * 0.42),
+              left: 28,
+              right: 28,
+            }
+          : { top: 120, bottom: 120, left: 120, right: 360 },
+        maxZoom: narrow ? 4.2 : 5,
         duration: 1400,
       });
     } catch (e) {
