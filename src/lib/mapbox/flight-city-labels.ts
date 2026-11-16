@@ -3,9 +3,13 @@ import { cities, type CityName, type Coordinate } from "@/data/cities";
 
 /** Collapse airport endpoints onto a single city label. */
 const LABEL_CITY: Partial<Record<CityName, CityName>> = {
+  "Dubai International": "Dubai",
+  "Houston Intercontinental": "Houston",
   "London Gatwick": "London",
   "London Heathrow": "London",
   "London Stansted": "London",
+  "Paris Charles de Gaulle": "Paris",
+  "Toronto Pearson": "Toronto",
 };
 
 export type FlightCityLabel = {
