@@ -12,6 +12,13 @@ const LABEL_CITY: Partial<Record<CityName, CityName>> = {
   "Toronto Pearson": "Toronto",
 };
 
+/** London has three airports, so the map names each one where the route ends. */
+const LONDON_AIRPORT_LABEL: Partial<Record<CityName, string>> = {
+  "London Gatwick": "Gatwick",
+  "London Heathrow": "Heathrow",
+  "London Stansted": "Stansted",
+};
+
 /** City shown for an airport endpoint, or the name itself when it is already a city. */
 export function flightCityLabel(name: string): string {
   return LABEL_CITY[name as CityName] ?? name;
@@ -29,6 +36,18 @@ export function getFlightCityLabels(): FlightCityLabel[] {
   for (const yearFlights of Object.values(flights)) {
     for (const flight of yearFlights) {
       for (const endpoint of [flight.originName, flight.destinationName]) {
+        const airportLabel = LONDON_AIRPORT_LABEL[endpoint as CityName];
+        if (airportLabel) {
+          const airport = cities[endpoint as CityName];
+          if (airport && !labels.has(endpoint)) {
+            labels.set(endpoint, {
+              name: airportLabel,
+              coordinates: airport.coordinates,
+            });
+          }
+          continue;
+        }
+
         const cityName = flightCityLabel(endpoint) as CityName;
         const city = cities[cityName];
         if (!city || labels.has(cityName)) continue;
