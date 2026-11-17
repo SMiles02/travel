@@ -79,7 +79,3 @@ npm run deploy
 This syncs the flight log to the private backup and runs `netlify deploy --prod`. Netlify runs the production build, which compiles the local `flights.ts` into the site. The source file stays gitignored and is not uploaded.
 
 The custom domain is configured in the Netlify project and DNS, not in this script.
-
-## Note on git history
-
-If this repo was ever public (or will be) with a real `flights.ts` already committed, remove it from history or push to a fresh public repo that never contained the private log. `.gitignore` alone does not erase past commits.
