@@ -34,9 +34,9 @@ export const cities = {
   Mumbai: { coordinates: [72.8679, 19.0896], countryCode: "IN" },
   Munich: { coordinates: [11.7861, 48.3538], countryCode: "DE" },
   "New Delhi": { coordinates: [77.1031, 28.5562], countryCode: "IN" },
-  Paris: { coordinates: [2.3522, 48.8566], countryCode: "FR" },
+  Paris: { coordinates: [2.5707, 49.004], countryCode: "FR" },
   "Paris Charles de Gaulle": {
-    coordinates: [2.5479, 49.0097],
+    coordinates: [2.5707, 49.004],
     countryCode: "FR",
   },
   Pisa: { coordinates: [10.3927, 43.6839], countryCode: "IT" },
