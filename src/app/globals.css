@@ -116,8 +116,8 @@
 }
 
 @media (max-width: 767px) {
-  .mapboxgl-ctrl-bottom-left,
-  .mapboxgl-ctrl-bottom-right {
+  .mapboxgl-map .mapboxgl-ctrl-bottom-left,
+  .mapboxgl-map .mapboxgl-ctrl-bottom-right {
     bottom: var(--map-logo-lift, 0px);
   }
 }
