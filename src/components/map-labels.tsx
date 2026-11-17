@@ -6,7 +6,7 @@ import {
   getFlightCityLabels,
   isCountryLabelLayer,
 } from "@/lib/mapbox/flight-city-labels";
-import { isMapStyleReady } from "@/lib/mapbox/style-ready";
+import { isMapStyleReady, whenMapStyleReady } from "@/lib/mapbox/style-ready";
 
 const CITY_SOURCE_ID = "flight-city-labels";
 const CITY_LAYER_ID = "flight-city-labels";
@@ -18,7 +18,6 @@ export default function MapLabels() {
     if (!map) return;
 
     const declutterStyleLabels = () => {
-      if (!isMapStyleReady(map)) return;
       const style = map.getStyle();
       if (!style?.layers) return;
 
@@ -49,7 +48,6 @@ export default function MapLabels() {
     };
 
     const addFlightCityLabels = () => {
-      if (!isMapStyleReady(map)) return;
       try {
         if (map.getLayer(CITY_LAYER_ID)) {
           map.removeLayer(CITY_LAYER_ID);
@@ -99,16 +97,14 @@ export default function MapLabels() {
     };
 
     const apply = () => {
-      if (!isMapStyleReady(map)) return;
       declutterStyleLabels();
       addFlightCityLabels();
     };
 
-    apply();
-    map.on("style.load", apply);
+    const stop = whenMapStyleReady(map, apply);
 
     return () => {
-      map.off("style.load", apply);
+      stop();
       if (!isMapStyleReady(map)) return;
       try {
         if (map.getLayer(CITY_LAYER_ID)) {

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useMap } from "@/context/map-context";
 import visitedCountries from "@/data/visited-countries.json";
 import { withWorldviewFilter } from "@/lib/mapbox/worldview";
-import { isMapStyleReady } from "@/lib/mapbox/style-ready";
+import { isMapStyleReady, whenMapStyleReady } from "@/lib/mapbox/style-ready";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
 
@@ -93,11 +93,10 @@ export default function ScratchMapLayer({ viewMode }: ScratchMapLayerProps) {
       }
     };
 
-    addCountryLayer();
-    map.on("style.load", addCountryLayer);
+    const stop = whenMapStyleReady(map, addCountryLayer);
 
     return () => {
-      map.off("style.load", addCountryLayer);
+      stop();
       removeCountryLayer();
     };
   }, [map, viewMode]);

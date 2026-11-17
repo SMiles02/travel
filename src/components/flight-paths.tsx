@@ -5,7 +5,7 @@ import { useMap } from "@/context/map-context";
 import * as turf from "@turf/turf";
 import { flightKey, getFlightsForYear } from "@/lib/flights-by-year";
 import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
-import { isMapStyleReady } from "@/lib/mapbox/style-ready";
+import { isMapStyleReady, whenMapStyleReady } from "@/lib/mapbox/style-ready";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
 
@@ -331,11 +331,10 @@ export default function FlightPaths({
       }
     };
 
-    addFlightPaths();
-    map.on("style.load", addFlightPaths);
+    const stop = whenMapStyleReady(map, addFlightPaths);
 
     return () => {
-      map.off("style.load", addFlightPaths);
+      stop();
       removeFlightPaths();
       setTooltip({ show: false, routes: [], x: 0, y: 0 });
     };
