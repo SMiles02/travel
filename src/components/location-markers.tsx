@@ -7,6 +7,7 @@ import { markersData } from "@/data/travel";
 import { cityToImages } from "@/data/city-images";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ShuffleText from "@/components/shuffle-text";
+import { useRaiseMapLogo } from "@/lib/mapbox/raise-map-logo";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
 
@@ -116,6 +117,8 @@ export default function LocationMarkers({ viewMode }: LocationMarkersProps) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [selectedLocation, viewMode]);
+
+  useRaiseMapLogo(viewMode === "gallery" && selectedLocation !== null, cardRef);
 
   if (viewMode !== "gallery" || !selectedLocation) return null;
 

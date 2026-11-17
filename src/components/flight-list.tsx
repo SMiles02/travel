@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Plane } from "lucide-react";
 import {
   ALL_YEARS,
@@ -12,6 +12,7 @@ import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
 import FlightPanelSwitch, {
   type FlightPanel,
 } from "@/components/flight-panel-switch";
+import { useRaiseMapLogo } from "@/lib/mapbox/raise-map-logo";
 
 const COUNT_DURATION_MS = 1500;
 
@@ -45,6 +46,8 @@ export default function FlightList({
   onSelect,
 }: FlightListProps) {
   const [query, setQuery] = useState("");
+  const sheetRef = useRef<HTMLDivElement>(null);
+  useRaiseMapLogo(active, sheetRef);
 
   const flights = useMemo(
     () => getFlightsForYear(selectedYear),
@@ -101,7 +104,10 @@ export default function FlightList({
     selectedYear === ALL_YEARS ? "All years" : selectedYear;
 
   return (
-    <div className="pointer-events-auto absolute z-20 flex max-h-[55dvh] w-auto flex-col inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-none md:w-[340px]">
+    <div
+      ref={sheetRef}
+      className="pointer-events-auto absolute z-20 flex max-h-[55dvh] w-auto flex-col inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-none md:w-[340px]"
+    >
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-white/20 bg-black/40 backdrop-blur-sm md:block md:flex-none">
         {/* Header */}
         <div className="flex items-center justify-between gap-6 px-5 pt-4 pb-3">

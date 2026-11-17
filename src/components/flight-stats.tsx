@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import { BarChart3 } from "lucide-react";
 import { ALL_YEARS, getFlightsForYear } from "@/lib/flights-by-year";
 import { getFlightStats, type AirlineStat, type YearStat } from "@/lib/flight-stats";
 import FlightPanelSwitch, {
   type FlightPanel,
 } from "@/components/flight-panel-switch";
+import { useRaiseMapLogo } from "@/lib/mapbox/raise-map-logo";
 
 type FlightStatsPanelProps = {
   active: boolean;
@@ -127,11 +128,16 @@ export default function FlightStatsPanel({
   const yearsComparable = stats.byYear.length > 1;
   const busiestYears = stats.byYear.filter((year) => year.flights === maxYearFlights);
   const scope = selectedYear === ALL_YEARS ? "All years" : selectedYear;
+  const sheetRef = useRef<HTMLDivElement>(null);
+  useRaiseMapLogo(active, sheetRef);
 
   if (!active) return null;
 
   return (
-    <div className="pointer-events-auto absolute z-20 w-auto max-h-[55dvh] overflow-y-auto overscroll-contain inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-[calc(100dvh-3rem)] md:w-[340px]">
+    <div
+      ref={sheetRef}
+      className="pointer-events-auto absolute z-20 w-auto max-h-[55dvh] overflow-y-auto overscroll-contain inset-x-3 bottom-3 md:inset-x-auto md:bottom-auto md:top-6 md:right-6 md:max-h-[calc(100dvh-3rem)] md:w-[340px]"
+    >
       <div className="bg-black/40 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden">
         <div className="flex items-center justify-between gap-6 px-5 pt-4 pb-3">
           <div className="flex flex-col gap-2">

@@ -14,11 +14,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { isFuzzyMatch } from "@/lib/fuzzy-match";
+import { useRaiseMapLogo } from "@/lib/mapbox/raise-map-logo";
 import { withWorldviewFilter } from "@/lib/mapbox/worldview";
 
 export default function GamePage() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const answerRef = useRef<HTMLDivElement | null>(null);
+  useRaiseMapLogo(true, answerRef);
   const router = useRouter();
   const [currentCountry, setCurrentCountry] = useState<string | null>(null);
   const [userAnswer, setUserAnswer] = useState("");
@@ -421,7 +424,10 @@ export default function GamePage() {
       </div>
 
       {/* Input form */}
-      <div className="pointer-events-auto absolute bottom-3 left-1/2 z-30 w-[calc(100%-1.5rem)] max-w-lg -translate-x-1/2 md:bottom-6">
+      <div
+        ref={answerRef}
+        className="pointer-events-auto absolute bottom-3 left-1/2 z-30 w-[calc(100%-1.5rem)] max-w-lg -translate-x-1/2 md:bottom-6"
+      >
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-3 rounded-lg border border-white/20 bg-black/40 p-4 backdrop-blur-sm"
