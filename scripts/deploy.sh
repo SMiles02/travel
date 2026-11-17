@@ -6,7 +6,8 @@
 #   # or
 #   ./scripts/deploy.sh
 #
-# Requires: Node 20+, Vercel CLI (npx vercel), Mapbox env in .env or Vercel project.
+# Requires: Node 20+, a linked Netlify site (npx netlify-cli@23 link --name suneet-travel),
+# and Mapbox env in .env.
 set -euo pipefail
 
 source "$(dirname "$0")/flights-paths.sh"
@@ -36,11 +37,8 @@ if [[ -s "${HOME}/.nvm/nvm.sh" ]]; then
   nvm use 20 >/dev/null || nvm use >/dev/null || true
 fi
 
-echo "Building…"
-npm run build
-
-echo "Deploying to Vercel (production)…"
-npx --yes vercel --prod --yes
+echo "Deploying to Netlify (production)…"
+npx --yes netlify-cli@23 deploy --prod --message "${1:-Production deploy}"
 
 echo "Done. Flight log remains gitignored; private copy at:"
 echo "  ${FLIGHTS_PRIVATE}"

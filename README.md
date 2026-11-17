@@ -64,15 +64,21 @@ export TRAVEL_FLIGHTS_FILE=/path/to/your/flights.ts
 
 ## Deploy (one liner)
 
-Requires the [Vercel CLI](https://vercel.com/docs/cli) (used via `npx`) and a linked project (`npx vercel link` once).
+Production is the Netlify site [suneet-travel](https://travel.suneetmahajan.com). It is not connected to GitHub, so a deploy has to run on a machine that has the private flight log. Link that machine once:
+
+```bash
+npx netlify-cli@23 link --name suneet-travel
+```
+
+Then:
 
 ```bash
 npm run deploy
 ```
 
-This syncs your flight log to the private backup, builds, and runs `vercel --prod`. The real `flights.ts` never needs to be on GitHub — only the machine that deploys needs it.
+This syncs the flight log to the private backup and runs `netlify deploy --prod`. Netlify runs the production build, which compiles the local `flights.ts` into the site. The source file stays gitignored and is not uploaded.
 
-Custom domain (e.g. `travel.suneetmahajan.com`) is configured in the Vercel project + DNS, not in this script.
+The custom domain is configured in the Netlify project and DNS, not in this script.
 
 ## Note on git history
 
