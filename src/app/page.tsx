@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import MapProvider from "@/lib/mapbox/provider";
 import LocationMarkers from "@/components/location-markers";
 import FlightPaths from "@/components/flight-paths";
@@ -19,27 +19,61 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Plane, Map, Images, Gamepad2 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ALL_YEARS, FLIGHT_YEARS } from "@/lib/flights-by-year";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
 
+function parseView(value: string | null): ViewMode {
+  if (value === "flights" || value === "scratch-map" || value === "gallery") {
+    return value;
+  }
+  return "gallery";
+}
+
+function parseYear(value: string | null): string {
+  if (value && FLIGHT_YEARS.includes(value)) return value;
+  return ALL_YEARS;
+}
+
+function parsePanel(value: string | null): FlightPanel {
+  return value === "stats" ? "stats" : "list";
+}
+
 export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <TravelMap />
+    </Suspense>
+  );
+}
+
+function TravelMap() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
-  const [viewMode, setViewMode] = useState<ViewMode>("gallery");
-  const [selectedYear, setSelectedYear] = useState<string>(ALL_YEARS);
-  const [flightPanel, setFlightPanel] = useState<FlightPanel>("list");
+  const searchParams = useSearchParams();
+  const viewMode = parseView(searchParams.get("view"));
+  const selectedYear = parseYear(searchParams.get("year"));
+  const flightPanel = parsePanel(searchParams.get("panel"));
   const [hoveredFlightKey, setHoveredFlightKey] = useState<string | null>(null);
   const [selectedFlightKey, setSelectedFlightKey] = useState<string | null>(
     null,
   );
 
+  const writeUrl = (view: ViewMode, year: string, panel: FlightPanel) => {
+    const params = new URLSearchParams();
+    if (view !== "gallery") params.set("view", view);
+    if (view === "flights" && year !== ALL_YEARS) params.set("year", year);
+    if (view === "flights" && panel === "stats") params.set("panel", panel);
+    const next = params.toString();
+    router.replace(next ? `/?${next}` : "/", { scroll: false });
+  };
+
   const handleTabChange = (value: string) => {
     if (value === "game") {
       router.push("/game");
     } else {
-      setViewMode(value as ViewMode);
+      writeUrl(value as ViewMode, selectedYear, flightPanel);
     }
   };
 
@@ -92,7 +126,10 @@ export default function Home() {
             </Tabs>
 
             {viewMode === "flights" && (
-              <Select value={selectedYear} onValueChange={setSelectedYear}>
+              <Select
+                value={selectedYear}
+                onValueChange={(year) => writeUrl(viewMode, year, flightPanel)}
+              >
                 <SelectTrigger className="h-9! w-[7.5rem] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80 md:w-[130px]">
                   <SelectValue placeholder="Select year" />
                 </SelectTrigger>
@@ -124,7 +161,7 @@ export default function Home() {
       <FlightList
         active={viewMode === "flights" && flightPanel === "list"}
         panel={flightPanel}
-        onPanelChange={setFlightPanel}
+        onPanelChange={(panel) => writeUrl(viewMode, selectedYear, panel)}
         selectedYear={selectedYear}
         hoveredKey={hoveredFlightKey}
         selectedKey={selectedFlightKey}
@@ -137,7 +174,7 @@ export default function Home() {
       <FlightStatsPanel
         active={viewMode === "flights" && flightPanel === "stats"}
         panel={flightPanel}
-        onPanelChange={setFlightPanel}
+        onPanelChange={(panel) => writeUrl(viewMode, selectedYear, panel)}
         selectedYear={selectedYear}
       />
 
