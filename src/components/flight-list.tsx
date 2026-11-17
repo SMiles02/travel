@@ -8,6 +8,7 @@ import {
   getFlightsForYear,
 } from "@/lib/flights-by-year";
 import { haversineKm } from "@/lib/flight-stats";
+import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
 import FlightPanelSwitch, {
   type FlightPanel,
 } from "@/components/flight-panel-switch";
@@ -43,16 +44,36 @@ export default function FlightList({
   onHover,
   onSelect,
 }: FlightListProps) {
+  const [query, setQuery] = useState("");
+
   const flights = useMemo(
     () => getFlightsForYear(selectedYear),
     [selectedYear],
   );
 
+  const visibleFlights = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    if (!needle) return flights;
+    return flights.filter((flight) => {
+      const fields = [
+        flight.originName,
+        flight.destinationName,
+        flightCityLabel(flight.originName),
+        flightCityLabel(flight.destinationName),
+        flight.airline,
+      ];
+      return fields.some((field) => field.toLowerCase().includes(needle));
+    });
+  }, [flights, query]);
+
   const totalKm = useMemo(() => {
     return Math.round(
-      flights.reduce((sum, f) => sum + haversineKm(f.origin, f.destination), 0),
+      visibleFlights.reduce(
+        (sum, f) => sum + haversineKm(f.origin, f.destination),
+        0,
+      ),
     );
-  }, [flights]);
+  }, [visibleFlights]);
 
   const [displayKm, setDisplayKm] = useState(0);
 
@@ -98,8 +119,20 @@ export default function FlightList({
             className="text-xs tracking-[0.12em] text-white/45 tabular-nums"
             style={monoFont}
           >
-            {flights.length}
+            {query.trim() ? `${visibleFlights.length}/${flights.length}` : flights.length}
           </span>
+        </div>
+
+        <div className="px-5 pb-3">
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="City or airline"
+            aria-label="Filter by city or airline"
+            className="h-8 w-full rounded-md border border-white/20 bg-black/30 px-2 text-xs text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"
+            style={monoFont}
+          />
         </div>
 
         {/* Perforated divider with notches */}
@@ -110,16 +143,16 @@ export default function FlightList({
         </div>
 
         {/* Flight list */}
-        {flights.length === 0 ? (
+        {visibleFlights.length === 0 ? (
           <div
             className="px-5 py-6 text-center text-xs uppercase tracking-[0.16em] text-white/40"
             style={monoFont}
           >
-            No flights logged
+            {flights.length === 0 ? "No flights logged" : "No matching flights"}
           </div>
         ) : (
           <ul className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-3 py-3 md:max-h-[50vh] md:flex-none">
-            {flights.map((flight, index) => {
+            {visibleFlights.map((flight, index) => {
               const color = flight.upcoming ? "#f59e0b" : "#3b82f6";
               const key = flightKey(flight);
               const isActive = key === hoveredKey || key === selectedKey;
@@ -143,7 +176,7 @@ export default function FlightList({
                         transform: isActive ? "scale(1.25)" : "scale(1)",
                       }}
                     />
-                    {index < flights.length - 1 && (
+                    {index < visibleFlights.length - 1 && (
                       <span className="mt-1 w-px flex-1 bg-white/15" />
                     )}
                   </div>
@@ -178,7 +211,7 @@ export default function FlightList({
       </div>
 
       {/* Distance card */}
-      {flights.length > 0 && (
+      {visibleFlights.length > 0 && (
         <div className="mt-3 flex shrink-0 items-center justify-between gap-6 rounded-lg border border-white/20 bg-black/40 px-4 py-2.5 backdrop-blur-sm">
           <span
             className="text-xs uppercase tracking-[0.18em] text-white/60"
