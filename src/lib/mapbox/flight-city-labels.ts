@@ -1,4 +1,3 @@
-import flights from "@/data/flights";
 import { cities, type CityName, type Coordinate } from "@/data/cities";
 
 /** Collapse airport endpoints onto a single city label. */
@@ -29,33 +28,38 @@ export type FlightCityLabel = {
   coordinates: Coordinate;
 };
 
-/** Unique city labels for places that appear in the flight log. */
-export function getFlightCityLabels(): FlightCityLabel[] {
+type LabelEndpoint = {
+  originName: string;
+  destinationName: string;
+};
+
+/** Unique labels for the places on these legs. */
+export function getFlightCityLabels(
+  legs: readonly LabelEndpoint[],
+): FlightCityLabel[] {
   const labels = new Map<string, FlightCityLabel>();
 
-  for (const yearFlights of Object.values(flights)) {
-    for (const flight of yearFlights) {
-      for (const endpoint of [flight.originName, flight.destinationName]) {
-        const airportLabel = LONDON_AIRPORT_LABEL[endpoint as CityName];
-        if (airportLabel) {
-          const airport = cities[endpoint as CityName];
-          if (airport && !labels.has(endpoint)) {
-            labels.set(endpoint, {
-              name: airportLabel,
-              coordinates: airport.coordinates,
-            });
-          }
-          continue;
+  for (const flight of legs) {
+    for (const endpoint of [flight.originName, flight.destinationName]) {
+      const airportLabel = LONDON_AIRPORT_LABEL[endpoint as CityName];
+      if (airportLabel) {
+        const airport = cities[endpoint as CityName];
+        if (airport && !labels.has(endpoint)) {
+          labels.set(endpoint, {
+            name: airportLabel,
+            coordinates: airport.coordinates,
+          });
         }
-
-        const cityName = flightCityLabel(endpoint) as CityName;
-        const city = cities[cityName];
-        if (!city || labels.has(cityName)) continue;
-        labels.set(cityName, {
-          name: cityName,
-          coordinates: city.coordinates,
-        });
+        continue;
       }
+
+      const cityName = flightCityLabel(endpoint) as CityName;
+      const city = cities[cityName];
+      if (!city || labels.has(cityName)) continue;
+      labels.set(cityName, {
+        name: cityName,
+        coordinates: city.coordinates,
+      });
     }
   }
 

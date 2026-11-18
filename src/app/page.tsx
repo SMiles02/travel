@@ -193,7 +193,7 @@ function TravelMap() {
           pitch: 45,
         }}
       >
-        <MapLabels />
+        <MapLabels viewMode={viewMode} selectedYear={selectedYear} />
         <LocationMarkers viewMode={viewMode} />
         <FlightPaths
           viewMode={viewMode}
