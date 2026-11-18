@@ -3,6 +3,7 @@
 import { useMemo, useRef } from "react";
 import { BarChart3 } from "lucide-react";
 import { ALL_YEARS, getFlightsForYear } from "@/lib/flights-by-year";
+import { filterFlights } from "@/lib/flight-filter";
 import { getFlightStats, type AirlineStat, type YearStat } from "@/lib/flight-stats";
 import FlightPanelSwitch, {
   type FlightPanel,
@@ -14,6 +15,7 @@ type FlightStatsPanelProps = {
   panel: FlightPanel;
   onPanelChange: (panel: FlightPanel) => void;
   selectedYear: string;
+  query: string;
 };
 
 const monoFont = { fontFamily: "var(--font-space-mono), monospace" } as const;
@@ -116,10 +118,15 @@ export default function FlightStatsPanel({
   panel,
   onPanelChange,
   selectedYear,
+  query,
 }: FlightStatsPanelProps) {
-  const flights = useMemo(
+  const yearFlights = useMemo(
     () => getFlightsForYear(selectedYear),
     [selectedYear],
+  );
+  const flights = useMemo(
+    () => filterFlights(yearFlights, query),
+    [yearFlights, query],
   );
   const stats = useMemo(() => getFlightStats(flights), [flights]);
   const maxYearFlights = Math.max(0, ...stats.byYear.map((year) => year.flights));
@@ -128,6 +135,7 @@ export default function FlightStatsPanel({
   const yearsComparable = stats.byYear.length > 1;
   const busiestYears = stats.byYear.filter((year) => year.flights === maxYearFlights);
   const scope = selectedYear === ALL_YEARS ? "All years" : selectedYear;
+  const needle = query.trim();
   const sheetRef = useRef<HTMLDivElement>(null);
   useRaiseMapLogo(active, sheetRef);
 
@@ -147,14 +155,14 @@ export default function FlightStatsPanel({
               style={monoFont}
             >
               <BarChart3 className="h-3.5 w-3.5" />
-              Stats {scope}
+              Stats {needle ? `${scope} · ${needle}` : scope}
             </div>
           </div>
           <span
             className="text-xs tracking-[0.12em] text-white/45 tabular-nums"
             style={monoFont}
           >
-            {stats.flights}
+            {needle ? `${stats.flights}/${yearFlights.length}` : stats.flights}
           </span>
         </div>
 
@@ -169,7 +177,7 @@ export default function FlightStatsPanel({
             className="px-5 py-6 text-center text-xs uppercase tracking-[0.16em] text-white/40"
             style={monoFont}
           >
-            No flights logged
+            {yearFlights.length === 0 ? "No flights logged" : "No matching flights"}
           </div>
         ) : (
           <div className="pb-4">

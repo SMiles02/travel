@@ -193,6 +193,7 @@ function TravelMap() {
           writeUrl(viewMode, selectedYear, panel, flightQuery)
         }
         selectedYear={selectedYear}
+        query={flightQuery}
       />
 
       {/* Globe map - full screen container, globe positioned lower */}
