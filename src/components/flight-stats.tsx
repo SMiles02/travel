@@ -89,7 +89,7 @@ function BarRow({
       <div className="h-1 w-full rounded-full bg-white/10">
         <div
           className={`h-full rounded-full ${emphasized ? "bg-white/80" : "bg-white/35"}`}
-          style={{ width: `${Math.max(width, 4)}%` }}
+          style={{ width: `${Math.max(width, 4).toFixed(1)}%` }}
         />
       </div>
     </div>
