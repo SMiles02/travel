@@ -184,19 +184,23 @@ export default function FlightStatsPanel({
               />
             )}
 
-            <SectionTitle>Distance by year</SectionTitle>
-            {stats.byYear.map((year) => {
-              const label = yearLabel(year, maxYearFlights, maxYearKm, yearsComparable);
-              return (
-                <BarRow
-                  key={year.year}
-                  label={label}
-                  value={`${year.flights} · ${formatKm(year.km)}`}
-                  width={(year.km / maxYearKm) * 100}
-                  emphasized={label !== year.year}
-                />
-              );
-            })}
+            {yearsComparable && (
+              <>
+                <SectionTitle>Distance by year</SectionTitle>
+                {stats.byYear.map((year) => {
+                  const label = yearLabel(year, maxYearFlights, maxYearKm, yearsComparable);
+                  return (
+                    <BarRow
+                      key={year.year}
+                      label={label}
+                      value={`${year.flights} · ${formatKm(year.km)}`}
+                      width={(year.km / maxYearKm) * 100}
+                      emphasized={label !== year.year}
+                    />
+                  );
+                })}
+              </>
+            )}
 
             <SectionTitle>Places</SectionTitle>
             <div className="grid grid-cols-3 gap-2 px-5 py-1">
