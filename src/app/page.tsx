@@ -55,17 +55,23 @@ function TravelMap() {
   const viewMode = parseView(searchParams.get("view"));
   const selectedYear = parseYear(searchParams.get("year"));
   const flightPanel = parsePanel(searchParams.get("panel"));
-  const [flightQuery, setFlightQuery] = useState("");
+  const flightQuery = searchParams.get("q") ?? "";
   const [hoveredFlightKey, setHoveredFlightKey] = useState<string | null>(null);
   const [selectedFlightKey, setSelectedFlightKey] = useState<string | null>(
     null,
   );
 
-  const writeUrl = (view: ViewMode, year: string, panel: FlightPanel) => {
+  const writeUrl = (
+    view: ViewMode,
+    year: string,
+    panel: FlightPanel,
+    query: string,
+  ) => {
     const params = new URLSearchParams();
     if (view !== "gallery") params.set("view", view);
     if (view === "flights" && year !== ALL_YEARS) params.set("year", year);
     if (view === "flights" && panel === "stats") params.set("panel", panel);
+    if (view === "flights" && query.trim()) params.set("q", query);
     const next = params.toString();
     router.replace(next ? `/?${next}` : "/", { scroll: false });
   };
@@ -74,7 +80,7 @@ function TravelMap() {
     if (value === "game") {
       router.push("/game");
     } else {
-      writeUrl(value as ViewMode, selectedYear, flightPanel);
+      writeUrl(value as ViewMode, selectedYear, flightPanel, flightQuery);
     }
   };
 
@@ -129,7 +135,9 @@ function TravelMap() {
             {viewMode === "flights" && (
               <Select
                 value={selectedYear}
-                onValueChange={(year) => writeUrl(viewMode, year, flightPanel)}
+                onValueChange={(year) =>
+                  writeUrl(viewMode, year, flightPanel, flightQuery)
+                }
               >
                 <SelectTrigger className="h-9! w-[7.5rem] bg-black/40! backdrop-blur-sm border-white/20! text-white/80 hover:text-white data-placeholder:text-white/80 px-2 py-1 [&_svg]:text-white/80 md:w-[130px]">
                   <SelectValue placeholder="Select year" />
@@ -162,10 +170,14 @@ function TravelMap() {
       <FlightList
         active={viewMode === "flights" && flightPanel === "list"}
         panel={flightPanel}
-        onPanelChange={(panel) => writeUrl(viewMode, selectedYear, panel)}
+        onPanelChange={(panel) =>
+          writeUrl(viewMode, selectedYear, panel, flightQuery)
+        }
         selectedYear={selectedYear}
         query={flightQuery}
-        onQueryChange={setFlightQuery}
+        onQueryChange={(query) =>
+          writeUrl(viewMode, selectedYear, flightPanel, query)
+        }
         hoveredKey={hoveredFlightKey}
         selectedKey={selectedFlightKey}
         onHover={setHoveredFlightKey}
@@ -177,7 +189,9 @@ function TravelMap() {
       <FlightStatsPanel
         active={viewMode === "flights" && flightPanel === "stats"}
         panel={flightPanel}
-        onPanelChange={(panel) => writeUrl(viewMode, selectedYear, panel)}
+        onPanelChange={(panel) =>
+          writeUrl(viewMode, selectedYear, panel, flightQuery)
+        }
         selectedYear={selectedYear}
       />
 
