@@ -8,7 +8,7 @@ import {
   getFlightsForYear,
 } from "@/lib/flights-by-year";
 import { haversineKm } from "@/lib/flight-stats";
-import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
+import { filterFlights } from "@/lib/flight-filter";
 import FlightPanelSwitch, {
   type FlightPanel,
 } from "@/components/flight-panel-switch";
@@ -25,6 +25,8 @@ type FlightListProps = {
   panel: FlightPanel;
   onPanelChange: (panel: FlightPanel) => void;
   selectedYear: string;
+  query: string;
+  onQueryChange: (query: string) => void;
   hoveredKey: string | null;
   selectedKey: string | null;
   onHover: (key: string | null) => void;
@@ -40,12 +42,13 @@ export default function FlightList({
   panel,
   onPanelChange,
   selectedYear,
+  query,
+  onQueryChange,
   hoveredKey,
   selectedKey,
   onHover,
   onSelect,
 }: FlightListProps) {
-  const [query, setQuery] = useState("");
   const sheetRef = useRef<HTMLDivElement>(null);
   useRaiseMapLogo(active, sheetRef);
 
@@ -54,20 +57,10 @@ export default function FlightList({
     [selectedYear],
   );
 
-  const visibleFlights = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    if (!needle) return flights;
-    return flights.filter((flight) => {
-      const fields = [
-        flight.originName,
-        flight.destinationName,
-        flightCityLabel(flight.originName),
-        flightCityLabel(flight.destinationName),
-        flight.airline,
-      ];
-      return fields.some((field) => field.toLowerCase().includes(needle));
-    });
-  }, [flights, query]);
+  const visibleFlights = useMemo(
+    () => filterFlights(flights, query),
+    [flights, query],
+  );
 
   const totalKm = useMemo(() => {
     return Math.round(
@@ -133,7 +126,7 @@ export default function FlightList({
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => onQueryChange(event.target.value)}
             placeholder="City or airline"
             aria-label="Filter by city or airline"
             className="h-8 w-full rounded-md border border-white/20 bg-black/30 px-2 text-xs text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"

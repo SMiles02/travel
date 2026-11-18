@@ -8,18 +8,24 @@ import {
 } from "@/lib/mapbox/flight-city-labels";
 import { isMapStyleReady, whenMapStyleReady } from "@/lib/mapbox/style-ready";
 import { getFlightsForYear } from "@/lib/flights-by-year";
+import { filterFlights } from "@/lib/flight-filter";
 
 type ViewMode = "gallery" | "scratch-map" | "flights";
 
 type MapLabelsProps = {
   viewMode: ViewMode;
   selectedYear: string;
+  query: string;
 };
 
 const CITY_SOURCE_ID = "flight-city-labels";
 const CITY_LAYER_ID = "flight-city-labels";
 
-export default function MapLabels({ viewMode, selectedYear }: MapLabelsProps) {
+export default function MapLabels({
+  viewMode,
+  selectedYear,
+  query,
+}: MapLabelsProps) {
   const { map } = useMap();
   const showFlightLabels = viewMode === "flights";
 
@@ -67,7 +73,9 @@ export default function MapLabels({ viewMode, selectedYear }: MapLabelsProps) {
 
         if (!showFlightLabels) return;
 
-        const labels = getFlightCityLabels(getFlightsForYear(selectedYear));
+        const labels = getFlightCityLabels(
+          filterFlights(getFlightsForYear(selectedYear), query),
+        );
         map.addSource(CITY_SOURCE_ID, {
           type: "geojson",
           data: {
@@ -128,7 +136,7 @@ export default function MapLabels({ viewMode, selectedYear }: MapLabelsProps) {
         // Map may already be removed
       }
     };
-  }, [map, showFlightLabels, selectedYear]);
+  }, [map, showFlightLabels, selectedYear, query]);
 
   return null;
 }

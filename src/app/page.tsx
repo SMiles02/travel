@@ -55,6 +55,7 @@ function TravelMap() {
   const viewMode = parseView(searchParams.get("view"));
   const selectedYear = parseYear(searchParams.get("year"));
   const flightPanel = parsePanel(searchParams.get("panel"));
+  const [flightQuery, setFlightQuery] = useState("");
   const [hoveredFlightKey, setHoveredFlightKey] = useState<string | null>(null);
   const [selectedFlightKey, setSelectedFlightKey] = useState<string | null>(
     null,
@@ -81,7 +82,7 @@ function TravelMap() {
   useEffect(() => {
     setHoveredFlightKey(null);
     setSelectedFlightKey(null);
-  }, [selectedYear, viewMode]);
+  }, [selectedYear, viewMode, flightQuery]);
 
   return (
     <div className="relative h-dvh w-screen overflow-hidden">
@@ -163,6 +164,8 @@ function TravelMap() {
         panel={flightPanel}
         onPanelChange={(panel) => writeUrl(viewMode, selectedYear, panel)}
         selectedYear={selectedYear}
+        query={flightQuery}
+        onQueryChange={setFlightQuery}
         hoveredKey={hoveredFlightKey}
         selectedKey={selectedFlightKey}
         onHover={setHoveredFlightKey}
@@ -193,11 +196,16 @@ function TravelMap() {
           pitch: 45,
         }}
       >
-        <MapLabels viewMode={viewMode} selectedYear={selectedYear} />
+        <MapLabels
+          viewMode={viewMode}
+          selectedYear={selectedYear}
+          query={flightQuery}
+        />
         <LocationMarkers viewMode={viewMode} />
         <FlightPaths
           viewMode={viewMode}
           selectedYear={selectedYear}
+          query={flightQuery}
           hoveredKey={hoveredFlightKey}
           selectedKey={selectedFlightKey}
           onHoverChange={setHoveredFlightKey}

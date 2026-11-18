@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useMap } from "@/context/map-context";
 import * as turf from "@turf/turf";
 import { flightKey, getFlightsForYear } from "@/lib/flights-by-year";
+import { filterFlights } from "@/lib/flight-filter";
 import { flightCityLabel } from "@/lib/mapbox/flight-city-labels";
 import { isMapStyleReady, whenMapStyleReady } from "@/lib/mapbox/style-ready";
 
@@ -12,6 +13,7 @@ type ViewMode = "gallery" | "scratch-map" | "flights";
 type FlightPathsProps = {
   viewMode: ViewMode;
   selectedYear: string;
+  query: string;
   hoveredKey: string | null;
   selectedKey: string | null;
   onHoverChange: (key: string | null) => void;
@@ -20,6 +22,7 @@ type FlightPathsProps = {
 export default function FlightPaths({
   viewMode,
   selectedYear,
+  query,
   hoveredKey,
   selectedKey,
   onHoverChange,
@@ -100,7 +103,10 @@ export default function FlightPaths({
       try {
         removeFlightPaths();
 
-        const yearFlights = getFlightsForYear(selectedYear);
+        const yearFlights = filterFlights(
+          getFlightsForYear(selectedYear),
+          query,
+        );
 
         const features = yearFlights.map((path) => {
           const distance = turf.distance(path.origin, path.destination, {
@@ -338,7 +344,7 @@ export default function FlightPaths({
       removeFlightPaths();
       setTooltip({ show: false, routes: [], x: 0, y: 0 });
     };
-  }, [map, viewMode, selectedYear, onHoverChange]);
+  }, [map, viewMode, selectedYear, query, onHoverChange]);
 
   useEffect(() => {
     if (!isMapStyleReady(map) || viewMode !== "flights") return;
@@ -358,7 +364,7 @@ export default function FlightPaths({
 
   useEffect(() => {
     if (!isMapStyleReady(map) || viewMode !== "flights" || !selectedKey) return;
-    const yearFlights = getFlightsForYear(selectedYear);
+    const yearFlights = filterFlights(getFlightsForYear(selectedYear), query);
     const flight = yearFlights.find((f) => flightKey(f) === selectedKey);
     if (!flight) return;
 
@@ -388,7 +394,7 @@ export default function FlightPaths({
     } catch (e) {
       console.warn("Error flying to flight:", e);
     }
-  }, [map, viewMode, selectedYear, selectedKey]);
+  }, [map, viewMode, selectedYear, query, selectedKey]);
 
   return (
     <>
