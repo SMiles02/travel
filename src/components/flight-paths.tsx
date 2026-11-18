@@ -396,6 +396,51 @@ export default function FlightPaths({
     }
   }, [map, viewMode, selectedYear, query, selectedKey]);
 
+  useEffect(() => {
+    if (!isMapStyleReady(map) || viewMode !== "flights" || selectedKey) return;
+    if (!query.trim()) return;
+
+    const matches = filterFlights(getFlightsForYear(selectedYear), query);
+    if (matches.length === 0) return;
+
+    let minLng = Infinity;
+    let minLat = Infinity;
+    let maxLng = -Infinity;
+    let maxLat = -Infinity;
+    for (const flight of matches) {
+      for (const [lng, lat] of [flight.origin, flight.destination]) {
+        minLng = Math.min(minLng, lng);
+        minLat = Math.min(minLat, lat);
+        maxLng = Math.max(maxLng, lng);
+        maxLat = Math.max(maxLat, lat);
+      }
+    }
+
+    const narrow = window.innerWidth < 768;
+    try {
+      map.fitBounds(
+        [
+          [minLng, minLat],
+          [maxLng, maxLat],
+        ],
+        {
+          padding: narrow
+            ? {
+                top: 96,
+                bottom: Math.round(window.innerHeight * 0.42),
+                left: 28,
+                right: 28,
+              }
+            : { top: 120, bottom: 120, left: 120, right: 360 },
+          maxZoom: narrow ? 4.2 : 5,
+          duration: 1400,
+        },
+      );
+    } catch (e) {
+      console.warn("Error fitting filtered flights:", e);
+    }
+  }, [map, viewMode, selectedYear, query, selectedKey]);
+
   return (
     <>
       {tooltip.show && tooltip.routes.length > 0 && (
