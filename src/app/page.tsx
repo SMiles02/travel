@@ -69,9 +69,9 @@ function TravelMap() {
   ) => {
     const params = new URLSearchParams();
     if (view !== "gallery") params.set("view", view);
-    if (view === "flights" && year !== ALL_YEARS) params.set("year", year);
-    if (view === "flights" && panel === "stats") params.set("panel", panel);
-    if (view === "flights" && query.trim()) params.set("q", query);
+    if (year !== ALL_YEARS) params.set("year", year);
+    if (panel === "stats") params.set("panel", panel);
+    if (query.trim()) params.set("q", query);
     const next = params.toString();
     router.replace(next ? `/?${next}` : "/", { scroll: false });
   };
