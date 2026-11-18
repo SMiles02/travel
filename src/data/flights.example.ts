@@ -3,7 +3,7 @@ import { airlines } from "./airlines";
 
 /**
  * Sample flight log for public clones / CI.
- * Your real log lives outside git — see README "Private flight data".
+ * Your real log lives outside git. See the README.
  *
  * Copy this file to get started without private data:
  *   cp src/data/flights.example.ts src/data/flights.ts
