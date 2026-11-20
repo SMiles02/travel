@@ -3,6 +3,7 @@ export const airlines = {
   AirFrance: "Air France",
   CroatiaAirlines: "Croatia Airlines",
   Emirates: "Emirates",
+  EasyJet: "easyJet",
   Etihad: "Etihad",
   IndiGo: "IndiGo",
   JetAirways: "Jet Airways",
