@@ -25,6 +25,7 @@ export const cities = {
     coordinates: [-95.3414, 29.9902],
     countryCode: "US",
   },
+  Istanbul: { coordinates: [28.7425, 41.2627], countryCode: "TR" },
   Keflavik: { coordinates: [-22.6056, 63.985], countryCode: "IS" },
   London: { coordinates: [-0.1278, 51.5074], countryCode: "GB" },
   "London Gatwick": { coordinates: [-0.1903, 51.1537], countryCode: "GB" },
